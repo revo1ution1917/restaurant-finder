@@ -474,23 +474,43 @@ function tagsFromNote(note) {
 }
 
 const main = async () => {
-  let html;
-  const pre = process.env.HTML_FILE;
-  if (pre && existsSync(pre)) {
-    const fileHtml = readFileSync(pre, "utf8");
-    console.log(
-      `Pre-fetched HTML: ${fileHtml.length} bytes, marker=${fileHtml.includes("APP_INITIALIZATION_STATE")}`
-    );
-    if (fileHtml.includes("APP_INITIALIZATION_STATE")) html = fileHtml;
-  }
-  if (!html) {
-    console.log(`Fetching list: ${LIST_URL}`);
-    const r = await fetchListPage(LIST_URL);
-    console.log(`Resolved to: ${r.finalUrl}`);
-    html = r.html;
+  let scraped = null;
+
+  // Preferred source: the internal getlist JSON endpoint (fetched by the
+  // workflow alongside the page; returns the complete list in one payload).
+  const jsonFile = process.env.LIST_JSON_FILE;
+  if (jsonFile && existsSync(jsonFile)) {
+    const raw = readFileSync(jsonFile, "utf8");
+    console.log(`Pre-fetched getlist JSON: ${raw.length} bytes`);
+    try {
+      const payload = JSON.parse(raw.replace(/^\)\]\}'\s*/, ""));
+      const p = scanPlaces(payload);
+      console.log(`[getlist] scan found ${p.length} places`);
+      if (p.length > 0) scraped = p;
+    } catch (e) {
+      console.log(`[getlist] parse failed: ${e.message}`);
+    }
   }
 
-  const scraped = parsePlaces(html);
+  // Fallback: parse the page HTML (works when the list is server-rendered).
+  if (!scraped) {
+    let html;
+    const pre = process.env.HTML_FILE;
+    if (pre && existsSync(pre)) {
+      const fileHtml = readFileSync(pre, "utf8");
+      console.log(
+        `Pre-fetched HTML: ${fileHtml.length} bytes, marker=${fileHtml.includes("APP_INITIALIZATION_STATE")}`
+      );
+      if (fileHtml.includes("APP_INITIALIZATION_STATE")) html = fileHtml;
+    }
+    if (!html) {
+      console.log(`Fetching list: ${LIST_URL}`);
+      const r = await fetchListPage(LIST_URL);
+      console.log(`Resolved to: ${r.finalUrl}`);
+      html = r.html;
+    }
+    scraped = parsePlaces(html);
+  }
   console.log(`Parsed ${scraped.length} places from the shared list.`);
 
   const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : { places: [] };

@@ -43,6 +43,16 @@ jobs:
           else
             echo "WARNING: impersonated fetch also lacked marker ($(wc -c < /tmp/list.html 2>/dev/null || echo 0) bytes); sync will try direct fetch"
           fi
+          # The page preloads an internal getlist endpoint (with session token)
+          # that returns the full list as JSON. Fetch it too.
+          HREF=$(grep -o '/maps/preview/entitylist/getlist[^"]*' /tmp/list.html | head -1 | sed 's/&amp;/\&/g')
+          if [ -n "$HREF" ]; then
+            echo "Found getlist endpoint, fetching"
+            ./ci/curl_chrome116 -sL -H "Referer: https://www.google.com/" "https://www.google.com${HREF}" -o /tmp/list.json
+            echo "getlist response: $(wc -c < /tmp/list.json) bytes"
+          else
+            echo "No getlist endpoint found in page"
+          fi
 
       - name: Debug page structure
         env:
@@ -54,6 +64,7 @@ jobs:
           LIST_URL: ${{ secrets.LIST_URL }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           HTML_FILE: /tmp/list.html
+          LIST_JSON_FILE: /tmp/list.json
         run: node sync/sync.mjs
 
       - name: Upload fetched HTML for debugging (on failure)
