@@ -44,6 +44,11 @@ jobs:
             echo "WARNING: impersonated fetch also lacked marker ($(wc -c < /tmp/list.html 2>/dev/null || echo 0) bytes); sync will try direct fetch"
           fi
 
+      - name: Debug page structure
+        env:
+          HTML_FILE: /tmp/list.html
+        run: node sync/debug.mjs || true
+
       - name: Run sync
         env:
           LIST_URL: ${{ secrets.LIST_URL }}
