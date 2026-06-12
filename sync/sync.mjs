@@ -129,22 +129,46 @@ async function fetchListPage(url) {
 // so minor schema shuffles don't break it; if Google changes things
 // fundamentally, we exit(1) and the GitHub Action notifies you.
 
+// Find the end of the JSON array that starts at html[start] by tracking
+// bracket depth (string-aware). Robust against whatever follows the blob.
+function sliceJsonArray(html, start) {
+  let depth = 0, inStr = false, esc = false;
+  for (let i = start; i < html.length; i++) {
+    const c = html[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === "\\") esc = true;
+      else if (c === '"') inStr = false;
+    } else if (c === '"') inStr = true;
+    else if (c === "[") depth++;
+    else if (c === "]") {
+      depth--;
+      if (depth === 0) return html.slice(start, i + 1);
+    }
+  }
+  return null;
+}
+
 function extractInitState(html) {
   const marker = "window.APP_INITIALIZATION_STATE=";
   const i = html.indexOf(marker);
-  if (i === -1) return null;
+  if (i === -1) {
+    console.log("[parse] APP_INITIALIZATION_STATE marker not found");
+    return null;
+  }
   const start = i + marker.length;
-  const end = html.indexOf(";window.APP_FLAGS", start);
-  const raw = end === -1 ? html.slice(start, html.indexOf("</script>", start)) : html.slice(start, end);
+  const raw = sliceJsonArray(html, start);
+  if (!raw) {
+    console.log("[parse] could not bracket-match the init blob");
+    return null;
+  }
   try {
-    return JSON.parse(raw);
-  } catch {
-    // Sometimes the blob ends with a trailing ';'
-    try {
-      return JSON.parse(raw.replace(/;\s*$/, ""));
-    } catch {
-      return null;
-    }
+    const parsed = JSON.parse(raw);
+    console.log(`[parse] init state parsed: ${raw.length} chars`);
+    return parsed;
+  } catch (e) {
+    console.log(`[parse] init state JSON.parse failed: ${e.message} (blob ${raw.length} chars)`);
+    return null;
   }
 }
 
@@ -230,11 +254,13 @@ function parsePlaces(html) {
   const init = extractInitState(html);
   if (init) {
     deepUnwrap(init, trees);
+    console.log(`[parse] unwrapped ${trees.length} nested payload(s)`);
     trees.push(init); // scan the raw init state too, as a fallback
   }
   let places = [];
   for (const t of trees) {
     const p = scanPlaces(t);
+    console.log(`[parse] tree scan found ${p.length} places`);
     if (p.length > places.length) places = p;
   }
   return places;
