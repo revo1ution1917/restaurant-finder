@@ -22,10 +22,33 @@ jobs:
         with:
           node-version: "20"
 
+      # Google serves the data-bearing page only to clients that look like real
+      # browsers (TLS-level fingerprinting). curl-impersonate (pinned release of
+      # the well-known OSS tool) fetches the page with Chrome's exact handshake.
+      - name: Fetch list page (browser-impersonated)
+        env:
+          LIST_URL: ${{ secrets.LIST_URL }}
+        run: |
+          set -e
+          curl -sSL -o ci.tar.gz https://github.com/lwthiker/curl-impersonate/releases/download/v0.6.1/curl-impersonate-v0.6.1.x86_64-linux-gnu.tar.gz
+          mkdir -p ci && tar xzf ci.tar.gz -C ci
+          SEP='?'; case "$LIST_URL" in *\?*) SEP='&';; esac
+          ./ci/curl_chrome116 -sL "${LIST_URL}${SEP}ucbcb=1" -o /tmp/list.html || true
+          if ! grep -q APP_INITIALIZATION_STATE /tmp/list.html 2>/dev/null; then
+            echo "ucbcb variant lacked marker, trying plain URL"
+            ./ci/curl_chrome116 -sL "$LIST_URL" -o /tmp/list.html || true
+          fi
+          if grep -q APP_INITIALIZATION_STATE /tmp/list.html 2>/dev/null; then
+            echo "Got data-bearing page ($(wc -c < /tmp/list.html) bytes)"
+          else
+            echo "WARNING: impersonated fetch also lacked marker ($(wc -c < /tmp/list.html 2>/dev/null || echo 0) bytes); sync will try direct fetch"
+          fi
+
       - name: Run sync
         env:
           LIST_URL: ${{ secrets.LIST_URL }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          HTML_FILE: /tmp/list.html
         run: node sync/sync.mjs
 
       - name: Commit if changed

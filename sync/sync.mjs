@@ -448,9 +448,21 @@ function tagsFromNote(note) {
 }
 
 const main = async () => {
-  console.log(`Fetching list: ${LIST_URL}`);
-  const { html, finalUrl } = await fetchListPage(LIST_URL);
-  console.log(`Resolved to: ${finalUrl}`);
+  let html;
+  const pre = process.env.HTML_FILE;
+  if (pre && existsSync(pre)) {
+    const fileHtml = readFileSync(pre, "utf8");
+    console.log(
+      `Pre-fetched HTML: ${fileHtml.length} bytes, marker=${fileHtml.includes("APP_INITIALIZATION_STATE")}`
+    );
+    if (fileHtml.includes("APP_INITIALIZATION_STATE")) html = fileHtml;
+  }
+  if (!html) {
+    console.log(`Fetching list: ${LIST_URL}`);
+    const r = await fetchListPage(LIST_URL);
+    console.log(`Resolved to: ${r.finalUrl}`);
+    html = r.html;
+  }
 
   const scraped = parsePlaces(html);
   console.log(`Parsed ${scraped.length} places from the shared list.`);
