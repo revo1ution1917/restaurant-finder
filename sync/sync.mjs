@@ -65,34 +65,48 @@ function diagnose(label, res, html) {
   );
 }
 
+// The maps.app.goo.gl short link sometimes returns a 200 interstitial page
+// (no HTTP redirect) for non-browser clients. The real Maps URL is embedded
+// in that page — dig it out so we can follow it manually.
+function extractMapsUrl(html) {
+  const unescaped = html
+    .replace(/\\\//g, "/")
+    .replace(/\\u003d/gi, "=")
+    .replace(/\\u0026/gi, "&")
+    .replace(/&amp;/g, "&");
+  // Prefer a meta-refresh target if present.
+  const meta = unescaped.match(/http-equiv=["']refresh["'][^>]*url=([^"'>]+)/i);
+  if (meta) return meta[1];
+  const m = unescaped.match(/https:\/\/www\.google\.com\/maps\/[^"'<>\s\\]+/);
+  return m ? m[0] : null;
+}
+
 async function fetchListPage(url) {
-  // Attempt 1: browser-like headers, no cookies.
-  let res = await fetch(url, { headers: BROWSER_HEADERS, redirect: "follow" });
-  let html = await res.text();
-  diagnose("attempt1", res, html);
-  if (res.ok && html.includes("APP_INITIALIZATION_STATE")) return { html, finalUrl: res.url };
+  const variants = [
+    { label: "no-cookie", headers: BROWSER_HEADERS },
+    { label: "consent-cookie", headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE } },
+  ];
+  for (const v of variants) {
+    let res = await fetch(url, { headers: v.headers, redirect: "follow" });
+    let html = await res.text();
+    diagnose(`fetch/${v.label}`, res, html);
 
-  // Attempt 2: add consent cookies (EU consent interstitial bypass).
-  res = await fetch(url, {
-    headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE },
-    redirect: "follow",
-  });
-  html = await res.text();
-  diagnose("attempt2", res, html);
-  if (res.ok && html.includes("APP_INITIALIZATION_STATE")) return { html, finalUrl: res.url };
-
-  // Attempt 3: hl/gl pinned on the resolved URL.
-  const sep = res.url.includes("?") ? "&" : "?";
-  const pinned = res.url + sep + "hl=en&gl=GB";
-  res = await fetch(pinned, {
-    headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE },
-    redirect: "follow",
-  });
-  html = await res.text();
-  diagnose("attempt3", res, html);
-
-  if (!res.ok) throw new Error(`Fetch failed: HTTP ${res.status}`);
-  return { html, finalUrl: res.url };
+    // Landed on the shortlink interstitial? Follow the embedded Maps URL.
+    if (res.ok && !html.includes("APP_INITIALIZATION_STATE")) {
+      const target = extractMapsUrl(html);
+      if (target) {
+        res = await fetch(target, { headers: v.headers, redirect: "follow" });
+        html = await res.text();
+        diagnose(`follow/${v.label}`, res, html);
+      } else {
+        console.log(`[follow/${v.label}] no embedded Maps URL found in interstitial`);
+      }
+    }
+    if (res.ok && html.includes("APP_INITIALIZATION_STATE")) {
+      return { html, finalUrl: res.url };
+    }
+  }
+  throw new Error("Could not obtain the data-bearing list page (see diagnostics above)");
 }
 
 // ------------------------------------------------------------------- parsing
