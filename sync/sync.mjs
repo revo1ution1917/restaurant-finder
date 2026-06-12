@@ -100,6 +100,10 @@ async function fetchListPage(url) {
         diagnose(`follow/${v.label}`, res, html);
       } else {
         console.log(`[follow/${v.label}] no embedded Maps URL found in interstitial`);
+        // Diagnostics: list URLs present so the parser can be fixed if Google
+        // changes the interstitial again.
+        const urls = [...new Set(html.match(/https?:\/\/[^"'<>\s\\]+/g) || [])].slice(0, 15);
+        console.log(`[diag] urls in page: ${urls.join(" | ").slice(0, 1500)}`);
       }
     }
     if (res.ok && html.includes("APP_INITIALIZATION_STATE")) {
