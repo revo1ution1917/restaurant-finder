@@ -33,20 +33,65 @@ if (!LIST_URL) {
 }
 
 const UA =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
-const HEADERS = {
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36";
+// Full browser-like header set: Google serves the data-bearing page to real
+// browsers but a JS shell to bare fetches from datacenter IPs.
+const BROWSER_HEADERS = {
   "User-Agent": UA,
+  Accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
   "Accept-Language": "en-GB,en;q=0.9",
-  // Pre-set consent cookies so Google doesn't serve the EU consent interstitial.
-  Cookie: "CONSENT=YES+cb.20240101-00-p0.en+FX+000; SOCS=CAESHAgBEhJnd3NfMjAyNDAxMDEtMF9SQzIaAmVuIAEaBgiA_LyaBg",
+  "Sec-Ch-Ua": '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+  "Sec-Ch-Ua-Mobile": "?0",
+  "Sec-Ch-Ua-Platform": '"macOS"',
+  "Sec-Fetch-Dest": "document",
+  "Sec-Fetch-Mode": "navigate",
+  "Sec-Fetch-Site": "none",
+  "Sec-Fetch-User": "?1",
+  "Upgrade-Insecure-Requests": "1",
 };
+const CONSENT_COOKIE =
+  "CONSENT=YES+cb.20240101-00-p0.en+FX+000; SOCS=CAESHAgBEhJnd3NfMjAyNDAxMDEtMF9SQzIaAmVuIAEaBgiA_LyaBg";
 
 // ---------------------------------------------------------------- fetch page
 
+function diagnose(label, res, html) {
+  const host = (() => { try { return new URL(res.url).host; } catch { return "?"; } })();
+  console.log(
+    `[${label}] status=${res.status} host=${host} len=${html.length} ` +
+    `marker=${html.includes("APP_INITIALIZATION_STATE")} ` +
+    `consent=${host.includes("consent") || html.includes("consent.google.com")} ` +
+    `sorry=${res.url.includes("/sorry/") || html.includes("unusual traffic")}`
+  );
+}
+
 async function fetchListPage(url) {
-  const res = await fetch(url, { headers: HEADERS, redirect: "follow" });
-  if (!res.ok) throw new Error(`Fetch failed: HTTP ${res.status} for ${res.url}`);
-  const html = await res.text();
+  // Attempt 1: browser-like headers, no cookies.
+  let res = await fetch(url, { headers: BROWSER_HEADERS, redirect: "follow" });
+  let html = await res.text();
+  diagnose("attempt1", res, html);
+  if (res.ok && html.includes("APP_INITIALIZATION_STATE")) return { html, finalUrl: res.url };
+
+  // Attempt 2: add consent cookies (EU consent interstitial bypass).
+  res = await fetch(url, {
+    headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE },
+    redirect: "follow",
+  });
+  html = await res.text();
+  diagnose("attempt2", res, html);
+  if (res.ok && html.includes("APP_INITIALIZATION_STATE")) return { html, finalUrl: res.url };
+
+  // Attempt 3: hl/gl pinned on the resolved URL.
+  const sep = res.url.includes("?") ? "&" : "?";
+  const pinned = res.url + sep + "hl=en&gl=GB";
+  res = await fetch(pinned, {
+    headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE },
+    redirect: "follow",
+  });
+  html = await res.text();
+  diagnose("attempt3", res, html);
+
+  if (!res.ok) throw new Error(`Fetch failed: HTTP ${res.status}`);
   return { html, finalUrl: res.url };
 }
 
