@@ -81,33 +81,42 @@ function extractMapsUrl(html) {
   return m ? m[0] : null;
 }
 
+function withParam(u, kv) {
+  return u + (u.includes("?") ? "&" : "?") + kv;
+}
+
 async function fetchListPage(url) {
   const variants = [
     { label: "no-cookie", headers: BROWSER_HEADERS },
     { label: "consent-cookie", headers: { ...BROWSER_HEADERS, Cookie: CONSENT_COOKIE } },
   ];
-  for (const v of variants) {
-    let res = await fetch(url, { headers: v.headers, redirect: "follow" });
-    let html = await res.text();
-    diagnose(`fetch/${v.label}`, res, html);
+  // ucbcb=1 tells Google to skip the consent/deep-link interstitial and serve
+  // the data-bearing page to cookie-less clients.
+  const candidates = [withParam(url, "ucbcb=1"), url];
+  if (url.startsWith("https://www.google.com/")) {
+    candidates.push(
+      withParam(url.replace("https://www.google.com/", "https://google.com/"), "ucbcb=1")
+    );
+  }
 
-    // Landed on the shortlink interstitial? Follow the embedded Maps URL.
-    if (res.ok && !html.includes("APP_INITIALIZATION_STATE")) {
-      const target = extractMapsUrl(html);
-      if (target) {
-        res = await fetch(target, { headers: v.headers, redirect: "follow" });
-        html = await res.text();
-        diagnose(`follow/${v.label}`, res, html);
-      } else {
-        console.log(`[follow/${v.label}] no embedded Maps URL found in interstitial`);
-        // Diagnostics: list URLs present so the parser can be fixed if Google
-        // changes the interstitial again.
-        const urls = [...new Set(html.match(/https?:\/\/[^"'<>\s\\]+/g) || [])].slice(0, 15);
-        console.log(`[diag] urls in page: ${urls.join(" | ").slice(0, 1500)}`);
+  for (const cand of candidates) {
+    for (const v of variants) {
+      let res = await fetch(cand, { headers: v.headers, redirect: "follow" });
+      let html = await res.text();
+      diagnose(`fetch/${v.label}`, res, html);
+
+      // Landed on a shortlink/deep-link interstitial? Follow the embedded URL.
+      if (res.ok && !html.includes("APP_INITIALIZATION_STATE")) {
+        const target = extractMapsUrl(html);
+        if (target && target !== cand) {
+          res = await fetch(withParam(target, "ucbcb=1"), { headers: v.headers, redirect: "follow" });
+          html = await res.text();
+          diagnose(`follow/${v.label}`, res, html);
+        }
       }
-    }
-    if (res.ok && html.includes("APP_INITIALIZATION_STATE")) {
-      return { html, finalUrl: res.url };
+      if (res.ok && html.includes("APP_INITIALIZATION_STATE")) {
+        return { html, finalUrl: res.url };
+      }
     }
   }
   throw new Error("Could not obtain the data-bearing list page (see diagnostics above)");
