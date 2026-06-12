@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#16161a">
+<title>Restaurant Finder</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{
+  --bg:#16161a; --panel:#1f1f26; --panel2:#26262e; --text:#eceaf1; --muted:#9a97a5;
+  --accent:#ff8a5c; --accent2:#7ad7c4; --chip:#2d2d38; --chip-on:#ff8a5c; --chip-on-text:#1a120d;
+  --danger:#ff6b81; --radius:14px;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f6f4f0; --panel:#ffffff; --panel2:#efece6; --text:#241f1c; --muted:#7c756d;
+    --chip:#e8e3da; --accent:#d95f2b; --chip-on:#d95f2b; --chip-on-text:#fff; }
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding-bottom:env(safe-area-inset-bottom)}
+header{position:sticky;top:0;z-index:1000;background:var(--bg);padding:12px 14px 8px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+h1{font-size:18px;margin:0 0 10px;display:flex;align-items:center;justify-content:space-between}
+h1 .count{font-size:13px;color:var(--muted);font-weight:400}
+.searchrow{display:flex;gap:8px}
+#q{flex:1;background:var(--panel);border:1px solid var(--chip);color:var(--text);border-radius:var(--radius);
+  padding:11px 14px;font-size:16px;outline:none}
+#q:focus{border-color:var(--accent)}
+#q::placeholder{color:var(--muted)}
+button{font:inherit;cursor:pointer}
+.iconbtn{background:var(--panel);border:1px solid var(--chip);color:var(--text);border-radius:var(--radius);
+  padding:0 14px;font-size:18px}
+.iconbtn.active{background:var(--accent);color:var(--chip-on-text);border-color:var(--accent)}
+.chiprow{display:flex;gap:6px;overflow-x:auto;padding:8px 0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chiprow::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;background:var(--chip);color:var(--text);border:none;border-radius:999px;padding:7px 13px;
+  font-size:13.5px;white-space:nowrap}
+.chip.on{background:var(--chip-on);color:var(--chip-on-text);font-weight:600}
+.chip.neg{background:var(--danger);color:#fff;text-decoration:line-through}
+.chip .x{margin-left:6px;opacity:.7}
+.grouplabel{flex:0 0 auto;align-self:center;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--muted);padding-right:2px}
+#interp{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0 0}
+#interp:empty{display:none}
+.ichip{background:var(--panel2);border:1px dashed var(--accent2);color:var(--accent2);border-radius:999px;
+  padding:5px 11px;font-size:12.5px}
+main{padding:10px 14px 30px}
+#map{display:none;height:62vh;border-radius:var(--radius);margin-bottom:12px;z-index:1}
+body.mapmode #map{display:block}
+.card{background:var(--panel);border-radius:var(--radius);padding:13px 15px;margin-bottom:10px;
+  display:block;text-decoration:none;color:inherit}
+.card:active{transform:scale(.99)}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card .name{font-weight:650;font-size:16.5px}
+.card .rating{flex:0 0 auto;font-size:14px;color:var(--accent2);font-weight:600}
+.card .meta{color:var(--muted);font-size:13.5px;margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 10px}
+.card .note{margin-top:7px;font-size:13.5px;color:var(--text);opacity:.85;font-style:italic}
+.card .tagrow{margin-top:7px;display:flex;flex-wrap:wrap;gap:5px}
+.card .tag{background:var(--panel2);border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:50px 20px}
+.empty b{color:var(--text)}
+.updated{text-align:center;color:var(--muted);font-size:12px;padding:18px 0 4px}
+#clearall{background:none;border:none;color:var(--accent);font-size:13px;padding:6px 0;display:none}
+.leaflet-popup-content-wrapper{background:var(--panel);color:var(--text);border-radius:10px}
+.leaflet-popup-tip{background:var(--panel)}
+.leaflet-popup-content a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>🍽 Restaurant Finder <span class="count" id="count"></span></h1>
+  <div class="searchrow">
+    <input id="q" type="search" autocomplete="off" autocorrect="off"
+      placeholder='Try: "date night in Hackney, no Mexican, under £100, unpretentious"'>
+    <button class="iconbtn" id="mapToggle" title="Toggle map">🗺</button>
+  </div>
+  <div id="interp"></div>
+  <div class="chiprow" id="row-cuisine"></div>
+  <div class="chiprow" id="row-area"></div>
+  <div class="chiprow" id="row-other"></div>
+  <button id="clearall">Clear all filters</button>
+</header>
+<main>
+  <div id="map"></div>
+  <div id="results"></div>
+  <div class="updated" id="updated"></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+"use strict";
+
+/* ============================== state ============================== */
+const S = {
+  places: [],
+  cuisine: new Set(), cuisineNeg: new Set(),
+  area: new Set(),
+  price: new Set(),          // 1..4
+  minRating: 0,
+  tags: new Set(),           // chip-selected tags/vibes → HARD filter
+  vibesSoft: new Set(),      // NL-derived vibe words → soft ranking only
+  text: "",                  // free-text leftovers after NL parse
+  interp: [],                // human-readable interpretation chips
+  mapMode: false,
+};
+let map = null, markers = [];
+
+/* =========================== vocabulary ============================ */
+const CUISINE_SYNONYMS = {
+  japanese:["sushi","ramen","izakaya","omakase","katsu","udon","yakitori"],
+  italian:["pasta","pizza","trattoria","osteria"],
+  chinese:["dim sum","dumplings","sichuan","szechuan","cantonese","hotpot","hot pot"],
+  indian:["curry","dosa","biryani"],
+  thai:[], vietnamese:["pho","banh mi"], korean:["kbbq","korean bbq","bibimbap"],
+  mexican:["tacos","taqueria"], french:["bistro","brasserie"],
+  spanish:["tapas"], greek:[], turkish:["kebab","ocakbasi"],
+  lebanese:[], "middle eastern":["mezze","shawarma"], israeli:[],
+  american:["burgers","burger","bbq","barbecue","fried chicken","wings"],
+  mediterranean:[], seafood:["fish","oysters","lobster","crab"],
+  steak:["steakhouse"], vegan:["plant based","plant-based"], vegetarian:[],
+  caribbean:["jerk"], ethiopian:[], peruvian:["ceviche"], portuguese:[],
+  argentinian:[], georgian:[], "sri lankan":[], nepalese:[], pakistani:[],
+  malaysian:[], singaporean:[], taiwanese:[], filipino:[], indonesian:[],
+  "fish & chips":["fish and chips","chippy"], pub:["gastropub","pub food","sunday roast","roast"],
+  "wine bar":["wine"], bakery:["pastries","croissant"], brunch:["breakfast"],
+  café:["cafe","coffee"], dessert:["ice cream","gelato"],
+};
+// London area aliases for the NL parser (canonical names must match data.json areas)
+const AREA_ALIASES = {
+  "hackney":["hackney central"], "shoreditch":[], "dalston":[], "soho":[],
+  "london fields":[], "hackney wick":[], "stoke newington":["stokey"],
+  "bethnal green":[], "covent garden":[], "mayfair":[], "marylebone":[],
+  "fitzrovia":[], "islington":[], "angel":[], "clerkenwell":[], "farringdon":[],
+  "king's cross":["kings cross","kx"], "peckham":[], "brixton":[], "clapham":[],
+  "borough":["borough market"], "london bridge":[], "bermondsey":[],
+  "notting hill":[], "camden":[], "hampstead":[], "victoria park":[],
+  "spitalfields":[], "whitechapel":[], "canary wharf":[], "greenwich":[],
+  "deptford":[], "new cross":[], "dulwich":[], "tooting":[], "balham":[],
+  "putney":[], "fulham":[], "hammersmith":[], "chiswick":[], "richmond":[],
+  "wimbledon":[], "walthamstow":[], "leyton":[], "stratford":[], "mile end":[],
+  "bow":[], "wapping":[], "limehouse":[], "highbury":[], "finsbury park":[],
+  "crouch end":[], "haggerston":[], "hoxton":[], "de beauvoir":[],
+  "canonbury":[], "kentish town":[], "primrose hill":[], "westminster":[],
+  "victoria":[], "pimlico":[], "chelsea":[], "knightsbridge":[],
+  "south kensington":[], "kensington":[], "earl's court":["earls court"],
+  "bayswater":[], "paddington":[], "maida vale":[], "kilburn":[],
+  "st john's wood":["st johns wood"], "west hampstead":[], "clapton":[],
+  "camberwell":[], "kennington":[], "oval":[], "vauxhall":[], "waterloo":[],
+  "southbank":["south bank"], "elephant & castle":["elephant and castle"],
+  "nunhead":[], "forest hill":[], "brockley":[], "lewisham":[],
+  "herne hill":[], "streatham":[], "battersea":[], "wandsworth":[],
+  "earlsfield":[], "tottenham":[], "wood green":[], "harringay":[],
+  "muswell hill":[], "holborn":[], "bloomsbury":[], "euston":[],
+  "old street":[], "barbican":[], "city of london":["the city"],
+  "aldgate":[], "temple":[], "holloway":[], "acton":[], "ealing":[],
+  "shepherd's bush":["shepherds bush"], "ladbroke grove":[], "kew":[],
+  "brent cross":[], "east london":[], "north london":[], "south london":[],
+  "west london":[], "central london":["central"],
+};
+const REGION_AREAS = {
+  "east london":["Hackney","Shoreditch","Dalston","London Fields","Hackney Wick","Clapton","Stoke Newington","Bethnal Green","Whitechapel","Spitalfields","Mile End","Bow","Victoria Park","Haggerston","Hoxton","De Beauvoir","Walthamstow","Leyton","Stratford","Limehouse","Wapping","Canary Wharf","Aldgate","Old Street"],
+  "north london":["Islington","Angel","Highbury","Finsbury Park","Holloway","Camden","Kentish Town","Hampstead","Crouch End","Muswell Hill","Wood Green","Harringay","Tottenham","Canonbury","Primrose Hill","King's Cross","West Hampstead","Kilburn"],
+  "south london":["Peckham","Brixton","Clapham","Camberwell","Dulwich","Herne Hill","Tooting","Balham","Streatham","Bermondsey","Borough","London Bridge","Deptford","New Cross","Greenwich","Nunhead","Forest Hill","Brockley","Lewisham","Kennington","Oval","Vauxhall","Elephant & Castle","Battersea","Wandsworth","Earlsfield","Wimbledon","Putney"],
+  "west london":["Notting Hill","Ladbroke Grove","Bayswater","Paddington","Chelsea","Fulham","Hammersmith","Chiswick","Shepherd's Bush","Kensington","South Kensington","Earl's Court","Knightsbridge","Acton","Ealing","Richmond","Kew","Maida Vale"],
+  "central london":["Soho","Covent Garden","Mayfair","Marylebone","Fitzrovia","Bloomsbury","Holborn","Clerkenwell","Farringdon","Westminster","Victoria","Pimlico","Temple","Barbican","City of London","Euston","Waterloo","Southbank"],
+};
+const VIBE_WORDS = ["date night","date","romantic","cozy","cosy","casual","fancy","fine dining","special occasion",
+  "unpretentious","lively","quiet","intimate","fun","buzzy","chill","group","groups","big group","solo",
+  "outdoor","terrace","garden","late night","quick","brunch","lunch","dinner","celebration","birthday",
+  "anniversary","impressive","hidden gem","classic","trendy","hip","old school","family","kid friendly",
+  "kid-friendly","walk-in","walk ins","no reservations","natural wine","small plates","sharing"];
+const PRICE_WORDS = {
+  1:["cheap","budget","cheap eats","inexpensive","affordable"],
+  2:["mid range","mid-range","moderate","reasonable"],
+  3:["nice","upscale","pricey","smart"],
+  4:["expensive","blowout","splurge","luxury","very expensive","fine dining"],
+};
+
+/* ============================ NL parser ============================ */
+function parseQuery(raw){
+  const out = { cuisine:new Set(), cuisineNeg:new Set(), area:new Set(), price:new Set(),
+    minRating:0, vibesSoft:new Set(), text:"", interp:[] };
+  if(!raw.trim()) return out;
+  let q = " " + raw.toLowerCase().replace(/[!?.,;]/g," ").replace(/\s+/g," ") + " ";
+
+  const consume = (phrase) => { q = q.split(phrase).join(" "); };
+
+  // --- money: "under £100 for a couple/for two", "under £40", "£30pp"
+  const money = q.match(/(?:under|less than|max|below|around|about|~)?\s*£\s*(\d{2,4})\s*(?:pp|per person|each|a head|per head)?\s*(for (?:a )?(?:couple|two|2))?/);
+  if(money){
+    let amt = parseInt(money[1],10);
+    const isCouple = !!money[2] || /for (a )?(couple|two|2)/.test(q);
+    const pp = isCouple ? amt/2 : amt;
+    let lvl; // per-person incl. a drink, rough London mapping
+    if(pp <= 25) lvl=[1]; else if(pp <= 45) lvl=[1,2]; else if(pp <= 75) lvl=[1,2,3]; else lvl=[1,2,3,4];
+    lvl.forEach(l=>out.price.add(l));
+    out.interp.push(`≤ £${Math.round(pp)} per person → ${"£".repeat(Math.max(...lvl))} max`);
+    consume(money[0].trim());
+  }
+  // --- price words
+  for(const [lvl,words] of Object.entries(PRICE_WORDS)){
+    for(const w of words){
+      if(q.includes(" "+w+" ")){
+        const L = +lvl;
+        if(out.price.size===0){
+          (L<=2 ? [1,2].slice(0,L) : [L-0]).forEach(x=>out.price.add(x));
+          if(L===3) out.price.add(2);
+          out.interp.push(`${w} → ${"£".repeat(L)}`);
+        }
+        consume(" "+w+" ");
+      }
+    }
+  }
+  // --- rating
+  const rate = q.match(/(?:rated|rating)\s*(?:above|over|at least|\+)?\s*(\d(?:\.\d)?)/);
+  if(rate){ out.minRating = parseFloat(rate[1]); out.interp.push(`rating ≥ ${out.minRating}`); consume(rate[0]); }
+  else if(/ (well rated|highly rated|great reviews|good reviews|top rated) /.test(q)){
+    out.minRating = 4.4; out.interp.push("rating ≥ 4.4");
+    q = q.replace(/ (well rated|highly rated|great reviews|good reviews|top rated) /g," ");
+  }
+
+  // --- negated cuisines: "no/avoid/not/without X", "anything but X"
+  // Match the negation word + up to 3 following words, then find the longest
+  // cuisine prefix; consume ONLY "negword + cuisine" so trailing words survive.
+  const matchCuisine = (frag)=>{
+    for(const [c,syns] of Object.entries(CUISINE_SYNONYMS)){
+      if(frag===c || frag===c+" food" || syns.includes(frag)) return c;
+    }
+    return null;
+  };
+  const negRe = /\b(no|avoid|not|without|anything but|skip|except)\s+((?:[a-z&']+\s?){1,3})/g;
+  let m;
+  const negHits = [];
+  while((m = negRe.exec(q))){
+    const words = m[2].trim().split(/\s+/);
+    for(let k=Math.min(3,words.length); k>=1; k--){
+      const c = matchCuisine(words.slice(0,k).join(" "));
+      if(c){
+        out.cuisineNeg.add(c); out.interp.push(`exclude ${c}`);
+        negHits.push(" "+m[1]+" "+words.slice(0,k).join(" ")+" ");
+        break;
+      }
+    }
+  }
+  for(const h of negHits) consume(h); // only remove negations that named a cuisine
+
+  // --- areas: match longest alias first so "hackney wick" doesn't also hit "hackney"
+  const areaPhrases = [];
+  for(const [canon,aliases] of Object.entries(AREA_ALIASES))
+    for(const a of [canon,...aliases]) areaPhrases.push([a,canon]);
+  areaPhrases.sort((x,y)=>y[0].length-x[0].length);
+  for(const [a,canon] of areaPhrases){
+    if(q.includes(" "+a+" ")){
+      if(REGION_AREAS[canon]){
+        REGION_AREAS[canon].forEach(x=>out.area.add(x));
+        out.interp.push(`area: ${canon}`);
+      } else {
+        const proper = canon.replace(/(^|[\s'&-])\w/g, s=>s.toUpperCase())
+          .replace("And","and").replace("Of","of").replace("'S","'s");
+        if(!out.area.has(proper)){ out.area.add(proper); out.interp.push(`in ${proper}`); }
+      }
+      consume(" "+a+" ");
+    }
+  }
+
+  // --- vibe words BEFORE cuisines, longest first ("natural wine" must not hit "wine bar")
+  const vibesSorted = [...VIBE_WORDS].sort((x,y)=>y.length-x.length);
+  for(const v of vibesSorted){
+    if(q.includes(" "+v+" ")){ out.vibesSoft.add(v); out.interp.push(`vibe: ${v}`); consume(" "+v+" "); }
+  }
+
+  // --- positive cuisines, longest phrase first ("korean bbq" before "bbq")
+  const cuisinePhrases = [];
+  for(const [c,syns] of Object.entries(CUISINE_SYNONYMS))
+    for(const w of [c,...syns]) cuisinePhrases.push([w,c]);
+  cuisinePhrases.sort((x,y)=>y[0].length-x[0].length);
+  for(const [w,c] of cuisinePhrases){
+    if(q.includes(" "+w+" ")){
+      if(!out.cuisine.has(c)){ out.cuisine.add(c); out.interp.push(`cuisine: ${c}`); }
+      consume(" "+w+" ");
+    }
+  }
+
+  // --- leftovers become free-text search
+  out.text = q.replace(/\b(restaurant|restaurants|somewhere|place|places|food|for|a|an|the|with|good|in|near|nice|vibe|vibes|and|or|me|find|want|i|to|eat|dinner|lunch|that|is|are|couple|two|person|people|pp|us|please|something|bar|spot|joint)\b/g," ")
+    .replace(/[^a-z&' -]/g," ").replace(/\s+/g," ").trim();
+  if(out.text) out.interp.push(`text: "${out.text}"`);
+  return out;
+}
+
+/* ============================ filtering ============================ */
+function fullHay(p){
+  return ((p.tags||[]).join(" ")+" "+(p.vibes||[]).join(" ")+" "+(p.note||"")+" "
+    +(p.summary||"")+" "+(p.reviews||[]).join(" ")+" "+p.name).toLowerCase();
+}
+function vibeScore(p, want){
+  // soft match: how many wanted vibe words appear in tags/vibes/note/summary/reviews
+  const hay = fullHay(p);
+  let hits = 0;
+  for(const t of want){
+    const tt = t.replace("cosy","cozy");
+    if(hay.includes(t) || hay.includes(tt) ||
+       (t==="date night" && (hay.includes("date")||hay.includes("romantic")||hay.includes("intimate"))) ||
+       (t==="romantic" && hay.includes("date")) ||
+       (t==="cozy" && hay.includes("cosy"))) hits++;
+  }
+  return hits;
+}
+function applyFilters(){
+  const wantVibes = [...S.vibesSoft];
+  let res = S.places.filter(p=>{
+    if(S.cuisine.size && !(p.cuisine && S.cuisine.has(p.cuisine.toLowerCase()))) return false;
+    if(S.cuisineNeg.size && p.cuisine && S.cuisineNeg.has(p.cuisine.toLowerCase())) return false;
+    if(S.area.size && !(p.area && S.area.has(p.area))) return false;
+    if(S.price.size && p.price && !S.price.has(p.price)) return false;
+    if(S.minRating && (!p.rating || p.rating < S.minRating)) return false;
+    if(S.tags.size){ // chip-selected tags/vibes are hard filters
+      const hay = fullHay(p);
+      if(![...S.tags].every(t=>hay.includes(t))) return false;
+    }
+    if(S.text){
+      const hay = fullHay(p)+" "+(p.cuisine||"").toLowerCase()+" "+(p.area||"").toLowerCase()+" "+(p.address||"").toLowerCase();
+      if(!S.text.split(" ").every(w=>hay.includes(w))) return false;
+    }
+    return true;
+  });
+  // vibe: soft-rank (places matching vibe words float up; non-matching aren't excluded)
+  res = res.map(p=>({p, v:wantVibes.length?vibeScore(p,wantVibes):0}))
+    .sort((a,b)=> b.v - a.v || (b.p.rating||0)-(a.p.rating||0))
+    .map(x=>x.p);
+  return res;
+}
+
+/* ============================= render ============================== */
+const $ = (id)=>document.getElementById(id);
+function priceStr(n){ return n? "£".repeat(n) : ""; }
+
+function chipRow(el, label, items, selSet, fmt, negSet){
+  el.innerHTML = "";
+  if(items.length===0){ el.style.display="none"; return; }
+  el.style.display="";
+  const lab = document.createElement("span");
+  lab.className="grouplabel"; lab.textContent=label; el.appendChild(lab);
+  for(const it of items){
+    const b = document.createElement("button");
+    b.className = "chip" + (selSet.has(it)?" on":"") + (negSet&&negSet.has(it)?" neg":"");
+    b.textContent = fmt? fmt(it): it;
+    b.onclick = ()=>{
+      if(negSet && negSet.has(it)) negSet.delete(it);
+      else if(selSet.has(it)) selSet.delete(it);
+      else selSet.add(it);
+      render();
+    };
+    el.appendChild(b);
+  }
+}
+
+function render(){
+  const res = applyFilters();
+  $("count").textContent = `${res.length} / ${S.places.length}`;
+
+  // chip rows from data
+  const cuisines = [...new Set(S.places.map(p=>p.cuisine).filter(Boolean))]
+    .sort((a,b)=>S.places.filter(p=>p.cuisine===b).length - S.places.filter(p=>p.cuisine===a).length)
+    .map(c=>c.toLowerCase());
+  const areas = [...new Set(S.places.map(p=>p.area).filter(Boolean))]
+    .sort((a,b)=>S.places.filter(p=>p.area===b).length - S.places.filter(p=>p.area===a).length);
+  // chips: user tags + auto vibes from reviews, ranked by frequency
+  const tagOf = p => (p.tags||[]).concat(p.vibes||[]);
+  const tags = [...new Set(S.places.flatMap(tagOf))]
+    .sort((a,b)=>S.places.filter(p=>tagOf(p).includes(b)).length - S.places.filter(p=>tagOf(p).includes(a)).length)
+    .slice(0,30);
+
+  chipRow($("row-cuisine"), "Cuisine", cuisines, S.cuisine, c=>c[0].toUpperCase()+c.slice(1), S.cuisineNeg);
+  chipRow($("row-area"), "Area", areas, S.area, null);
+  // other row: price + rating + tags
+  const other = $("row-other"); other.innerHTML="";
+  const lab = document.createElement("span"); lab.className="grouplabel"; lab.textContent="More"; other.appendChild(lab);
+  for(const lvl of [1,2,3,4]){
+    const b=document.createElement("button");
+    b.className="chip"+(S.price.has(lvl)?" on":""); b.textContent="£".repeat(lvl);
+    b.onclick=()=>{S.price.has(lvl)?S.price.delete(lvl):S.price.add(lvl);render();};
+    other.appendChild(b);
+  }
+  for(const r of [4.0,4.5]){
+    const b=document.createElement("button");
+    b.className="chip"+(S.minRating===r?" on":""); b.textContent=`★ ${r}+`;
+    b.onclick=()=>{S.minRating = S.minRating===r?0:r; render();};
+    other.appendChild(b);
+  }
+  for(const t of tags){
+    const b=document.createElement("button");
+    b.className="chip"+(S.tags.has(t)?" on":""); b.textContent="#"+t;
+    b.onclick=()=>{S.tags.has(t)?S.tags.delete(t):S.tags.add(t);render();};
+    other.appendChild(b);
+  }
+
+  // interpretation chips
+  $("interp").innerHTML = S.interp.map(i=>`<span class="ichip">${i}</span>`).join("");
+
+  const anyFilter = S.cuisine.size||S.cuisineNeg.size||S.area.size||S.price.size||S.minRating||S.tags.size||S.text;
+  $("clearall").style.display = anyFilter? "block":"none";
+
+  // results
+  const R = $("results"); R.innerHTML="";
+  if(res.length===0){
+    R.innerHTML = `<div class="empty"><b>Nothing matches.</b><br>Try removing a filter — or your list needs more pins 😉</div>`;
+  }
+  for(const p of res.slice(0,150)){
+    const a=document.createElement("a");
+    a.className="card"; a.href=p.mapsUrl||"#"; a.target="_blank"; a.rel="noopener";
+    a.innerHTML = `
+      <div class="top"><span class="name">${esc(p.name)}</span>
+        <span class="rating">${p.rating?`★ ${p.rating.toFixed(1)}`:""}${p.ratingCount?` <span style="color:var(--muted);font-weight:400">(${p.ratingCount})</span>`:""}</span></div>
+      <div class="meta">
+        ${p.cuisine?`<span>${esc(p.cuisine)}</span>`:""}
+        ${p.area?`<span>📍 ${esc(p.area)}</span>`:""}
+        ${p.price?`<span>${priceStr(p.price)}</span>`:""}
+      </div>
+      ${p.note?`<div class="note">“${esc(p.note)}”</div>`:(p.summary?`<div class="note">${esc(p.summary)}</div>`:"")}
+      ${((p.tags&&p.tags.length)||(p.vibes&&p.vibes.length))?`<div class="tagrow">${(p.tags||[]).map(t=>`<span class="tag">#${esc(t)}</span>`).join("")}${(p.vibes||[]).map(t=>`<span class="tag">✨${esc(t)}</span>`).join("")}</div>`:""}`;
+    R.appendChild(a);
+  }
+  renderMap(res);
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+function renderMap(res){
+  if(!S.mapMode) return;
+  if(!map){
+    map = L.map("map",{zoomControl:true}).setView([51.515,-0.09],12);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+      {attribution:'&copy; OpenStreetMap &copy; CARTO', maxZoom:19}).addTo(map);
+  }
+  markers.forEach(m=>map.removeLayer(m)); markers=[];
+  const pts=[];
+  for(const p of res){
+    if(typeof p.lat!=="number") continue;
+    const mk = L.circleMarker([p.lat,p.lng],{radius:7,color:"#ff8a5c",fillColor:"#ff8a5c",fillOpacity:.85,weight:1});
+    mk.bindPopup(`<b>${esc(p.name)}</b><br>${p.cuisine?esc(p.cuisine)+" · ":""}${p.rating?"★ "+p.rating:""}<br><a href="${p.mapsUrl}" target="_blank">Open in Google Maps</a>`);
+    mk.addTo(map); markers.push(mk); pts.push([p.lat,p.lng]);
+  }
+  if(pts.length) map.fitBounds(pts,{padding:[30,30],maxZoom:15});
+  setTimeout(()=>map.invalidateSize(),50);
+}
+
+/* ============================== wire =============================== */
+let debounce=null;
+$("q").addEventListener("input", e=>{
+  clearTimeout(debounce);
+  debounce=setTimeout(()=>{
+    const r = parseQuery(e.target.value);
+    S.cuisine=r.cuisine; S.cuisineNeg=r.cuisineNeg; S.area=r.area; S.price=r.price;
+    S.minRating=r.minRating; S.vibesSoft=r.vibesSoft; S.text=r.text; S.interp=r.interp;
+    render();
+  }, 250);
+});
+$("mapToggle").onclick=()=>{
+  S.mapMode=!S.mapMode;
+  document.body.classList.toggle("mapmode",S.mapMode);
+  $("mapToggle").classList.toggle("active",S.mapMode);
+  render();
+};
+$("clearall").onclick=()=>{
+  $("q").value="";
+  Object.assign(S,{cuisine:new Set(),cuisineNeg:new Set(),area:new Set(),price:new Set(),
+    minRating:0,tags:new Set(),vibesSoft:new Set(),text:"",interp:[]});
+  render();
+};
+
+fetch("data.json?t="+Date.now())
+  .then(r=>{ if(!r.ok) throw new Error("data.json not found"); return r.json(); })
+  .then(d=>{
+    S.places = d.places||[];
+    $("updated").textContent = d.updated? `List synced ${new Date(d.updated).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})} · ${S.places.length} places` : "";
+    render();
+  })
+  .catch(e=>{ $("results").innerHTML = `<div class="empty"><b>Couldn't load data.json.</b><br>${esc(e.message)}</div>`; });
+</script>
+</body>
+</html>

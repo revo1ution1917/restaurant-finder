@@ -1,0 +1,15 @@
+{
+ "updated": "2026-06-12T12:00:00.000Z",
+ "source": "sample-data",
+ "count": 8,
+ "places": [
+  {"id":"sample1","name":"Brawn","lat":51.5310,"lng":-0.0690,"note":"date night, natural wine, unpretentious","tags":["date night","natural wine","unpretentious"],"area":"Bethnal Green","address":"49 Columbia Rd, London E2 7RG","cuisine":"French","rating":4.6,"ratingCount":1100,"price":3,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Brawn%20London"},
+  {"id":"sample2","name":"Bright","lat":51.5413,"lng":-0.0587,"note":"small plates, buzzy","tags":["small plates","buzzy"],"area":"London Fields","address":"1 Westgate St, London E8 3RL","cuisine":"Mediterranean","rating":4.5,"ratingCount":640,"price":3,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Bright%20London%20Fields"},
+  {"id":"sample3","name":"Tayyabs","lat":51.5173,"lng":-0.0651,"note":"cheap, lamb chops, big group","tags":["cheap","lamb chops","big group"],"area":"Whitechapel","address":"83-89 Fieldgate St, London E1 1JU","cuisine":"Pakistani","rating":4.4,"ratingCount":15000,"price":1,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Tayyabs%20London"},
+  {"id":"sample4","name":"Sushi Tetsu","lat":51.5238,"lng":-0.1046,"note":"omakase, special occasion, book way ahead","tags":["omakase","special occasion"],"area":"Clerkenwell","address":"12 Jerusalem Passage, London EC1V 4JP","cuisine":"Japanese","rating":4.9,"ratingCount":300,"price":4,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Sushi%20Tetsu%20London"},
+  {"id":"sample5","name":"El Pastor","lat":51.5052,"lng":-0.0904,"note":"tacos, lively, walk-in","tags":["tacos","lively","walk-in"],"area":"Borough","address":"7a Stoney St, London SE1 9AA","cuisine":"Mexican","rating":4.4,"ratingCount":3200,"price":2,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=El%20Pastor%20Borough"},
+  {"id":"sample6","name":"Mangal 2","lat":51.5469,"lng":-0.0755,"note":"modern Turkish, cool crowd, date night","tags":["modern turkish","cool crowd","date night"],"area":"Dalston","address":"4 Stoke Newington Rd, London N16 8BH","cuisine":"Turkish","rating":4.5,"ratingCount":1500,"price":2,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Mangal%202%20Dalston"},
+  {"id":"sample7","name":"The Marksman","lat":51.5306,"lng":-0.0637,"note":"sunday roast, unpretentious, pub","tags":["sunday roast","unpretentious","pub"],"area":"Bethnal Green","address":"254 Hackney Rd, London E2 7SJ","cuisine":"Pub","rating":4.4,"ratingCount":1300,"price":2,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=The%20Marksman%20Hackney"},
+  {"id":"sample8","name":"Café Cecilia","lat":51.5377,"lng":-0.0626,"note":"brunch, hidden gem, canalside","tags":["brunch","hidden gem","canalside"],"area":"London Fields","address":"32 Andrews Rd, London E8 4RL","cuisine":"Café","rating":4.5,"ratingCount":500,"price":2,"placeId":null,"mapsUrl":"https://www.google.com/maps/search/?api=1&query=Cafe%20Cecilia%20Hackney"}
+ ]
+}

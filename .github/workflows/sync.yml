@@ -1,0 +1,41 @@
+name: Sync Google Maps list
+
+on:
+  schedule:
+    - cron: "0 5,11,17,23 * * *"   # every 6 hours
+  workflow_dispatch: {}             # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run sync
+        env:
+          LIST_URL: ${{ secrets.LIST_URL }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: node sync/sync.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "list-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet data.json; then
+            git add data.json
+            git commit -m "sync: update restaurant data $(date -u +'%Y-%m-%d %H:%M')"
+            git push
+          else
+            echo "No changes."
+          fi
