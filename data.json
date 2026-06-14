@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-13T20:57:35.151Z",
+ "updated": "2026-06-14T10:39:56.519Z",
  "source": "google-maps-shared-list",
  "count": 331,
  "places": [
@@ -1434,8 +1434,8 @@
   {
    "id": "5221380486478397491:-2493460515723816458",
    "name": "Don't Tell Dad",
-   "lat": 51.5373297,
-   "lng": -0.2033631,
+   "lat": 51.5373289,
+   "lng": -0.2033622,
    "note": "Bakery with beautiful interiors",
    "tags": [],
    "area": "Kilburn",
@@ -5448,8 +5448,8 @@
   {
    "id": "5177072484290483541:-1934355709928764514",
    "name": "FOLD",
-   "lat": 51.5190432,
-   "lng": 0.0039658,
+   "lat": 51.5190499,
+   "lng": 0.0040178,
    "note": "Techno club with queer nights on Sundays",
    "tags": [],
    "area": "Bow",
@@ -8356,8 +8356,8 @@
   {
    "id": "5221393290716309217:-7269867395866092151",
    "name": "Fazenda Rodizio Bar & Grill Bishopsgate",
-   "lat": 51.5155667,
-   "lng": -0.0803605,
+   "lat": 51.5155396,
+   "lng": -0.0804168,
    "note": null,
    "tags": [],
    "area": "Aldgate",
