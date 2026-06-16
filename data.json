@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-16T16:14:42.721Z",
+ "updated": "2026-06-16T22:59:45.897Z",
  "source": "google-maps-shared-list",
  "count": 331,
  "places": [
@@ -2934,8 +2934,8 @@
   {
    "id": "5221390506193745781:1213862716908497279",
    "name": "LEYDI",
-   "lat": 51.5163437,
-   "lng": -0.1026188,
+   "lat": 51.516351099999994,
+   "lng": -0.1026132,
    "note": "Turkish brunch with unlimited tea £28",
    "tags": [],
    "area": "Farringdon",
@@ -8356,8 +8356,8 @@
   {
    "id": "5221393290716309217:-7269867395866092151",
    "name": "Fazenda Rodizio Bar & Grill Bishopsgate",
-   "lat": 51.5155396,
-   "lng": -0.0804168,
+   "lat": 51.5155624,
+   "lng": -0.0803755,
    "note": null,
    "tags": [],
    "area": "Aldgate",
