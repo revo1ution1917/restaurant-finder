@@ -1,8 +1,33 @@
 {
- "updated": "2026-06-18T23:24:16.450Z",
+ "updated": "2026-06-19T16:16:02.478Z",
  "source": "google-maps-shared-list",
- "count": 331,
+ "count": 332,
  "places": [
+  {
+   "id": "5221393735147136327:8121709736141778865",
+   "name": "Planque",
+   "lat": 51.538389699999996,
+   "lng": -0.075823,
+   "note": null,
+   "tags": [],
+   "area": "Haggerston",
+   "address": "322-324 Acton Mews, London E8 4EA, UK",
+   "cuisine": "French",
+   "rating": 4.4,
+   "ratingCount": 439,
+   "price": null,
+   "placeId": "ChIJRyXlH_AddkgRse-Pb_kbtnA",
+   "mapsUrl": "https://maps.google.com/?cid=8121709736141778865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "good wine"
+   ],
+   "reviews": [
+    "wow! has been a while that I left reviews on google maps but this restaurant, planque, blew my mind so I had to leave one. Great place, creative food, delicate flavours, almost …",
+    "Planque exceeds expectations every single time. Their menu is thoughtful and balanced including indulgent flavours and light airy seafood. The crab rice was decadent, punchy and…",
+    "Phenomenal food with an equally beautiful wine list. This has been our go to celebratory spot for the last 5 years, and we hope that continues long into the future. Planque serv…"
+   ]
+  },
   {
    "id": "5221393389365289617:7767239127089224594",
    "name": "Bambi",
