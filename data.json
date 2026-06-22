@@ -1,8 +1,58 @@
 {
- "updated": "2026-06-21T22:00:55.905Z",
+ "updated": "2026-06-22T17:17:34.203Z",
  "source": "google-maps-shared-list",
- "count": 332,
+ "count": 334,
  "places": [
+  {
+   "id": "5221392874280685957:8813275917528147258",
+   "name": "Lodestar Coffee",
+   "lat": 51.555259299999996,
+   "lng": -0.056158599999999996,
+   "note": "Amazing coffee",
+   "tags": [
+    "amazing coffee"
+   ],
+   "area": "Clapton",
+   "address": "163 Clarence Rd, Lower Clapton, London E5 8EE, UK",
+   "cuisine": "Café",
+   "rating": 4.9,
+   "ratingCount": 396,
+   "price": null,
+   "placeId": "ChIJhZFBsCcddkgROiXFk8ALT3o",
+   "mapsUrl": "https://maps.google.com/?cid=8813275917528147258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "One of the nicest and most authentic coffee places in london. Definitely worth the 1 hour detour if you really like specialty coffee. The vibe is very friendly and feels like ho…",
+    "Lodestar is my favourite speciality coffee shop! I just wish I lived closer! The owners/baristas are lovely and the vibe is impeccable. The coffee served is always fun - especia…",
+    "I was craving a croissant and a coffee after an early morning where I hadn’t had time for breakfast. I looked online, found this café with plenty of positive reviews, and decide…"
+   ]
+  },
+  {
+   "id": "5221392830282426131:-7480353796465146224",
+   "name": "Lucky & Joy",
+   "lat": 51.551880999999995,
+   "lng": -0.0522432,
+   "note": null,
+   "tags": [],
+   "area": "Hackney",
+   "address": "95 Lower Clapton Rd, Lower Clapton, London E5 0NP, UK",
+   "cuisine": null,
+   "rating": 4.7,
+   "ratingCount": 386,
+   "price": null,
+   "placeId": "ChIJE2fBcR0ddkgRkEZzz9pxMJg",
+   "mapsUrl": "https://maps.google.com/?cid=10966390277244405392&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Snug, homey restaurant serving Chinese dishes for lunch & dinner, plus cocktails.",
+   "vibes": [
+    "cozy"
+   ],
+   "reviews": [
+    "Loved this experience. Each dish is fresh, distinctive and packed with flavour. Lots of different textures to enjoy too. We highly recommend the soft cold noodles (how do they g…",
+    "The food here is outstanding...everything I ate was unbelievably good. The sesame noodles are sensational, the custard tart is ridiculously tasty. The dumplings were juicy. The …",
+    "I came here with a friend while visiting London and it was probably the best meal I had in the whole trip. We ordered five plates to share: the cucumber salad, peanut noodles, e…"
+   ]
+  },
   {
    "id": "5221393735147136327:8121709736141778865",
    "name": "Planque",
