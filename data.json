@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-23T17:31:34.152Z",
+ "updated": "2026-06-24T10:34:47.463Z",
  "source": "google-maps-shared-list",
  "count": 334,
  "places": [
@@ -1642,8 +1642,8 @@
   {
    "id": "5221390642064524429:-5770258152222541680",
    "name": "Mori Homemade London",
-   "lat": 51.542324099999995,
-   "lng": -0.1174181,
+   "lat": 51.5423233,
+   "lng": -0.1174292,
    "note": "Matcha cafe",
    "tags": [
     "matcha cafe"
@@ -2365,8 +2365,8 @@
   {
    "id": "5221393027537067763:111549383544840905",
    "name": "Ara Restaurant",
-   "lat": 51.515188099999996,
-   "lng": -0.07147579999999999,
+   "lat": 51.5151885,
+   "lng": -0.071421,
    "note": "Globally inspired",
    "tags": [
     "globally inspired"
