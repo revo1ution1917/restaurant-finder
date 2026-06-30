@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-30T10:44:31.539Z",
+ "updated": "2026-06-30T17:30:41.957Z",
  "source": "google-maps-shared-list",
  "count": 335,
  "places": [
@@ -900,8 +900,8 @@
   {
    "id": "5221392705858702643:-115131449573992365",
    "name": "Katsute100 Broadway Market",
-   "lat": 51.5361328,
-   "lng": -0.0623552,
+   "lat": 51.5361482,
+   "lng": -0.0624365,
    "note": "Matcha",
    "tags": [
     "matcha"
@@ -5546,8 +5546,8 @@
   {
    "id": "5177072484290483541:-1934355709928764514",
    "name": "FOLD",
-   "lat": 51.5190499,
-   "lng": 0.0040178,
+   "lat": 51.5190432,
+   "lng": 0.0039658,
    "note": "Techno club with queer nights on Sundays",
    "tags": [],
    "area": "Bow",
