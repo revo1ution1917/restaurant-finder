@@ -1,8 +1,31 @@
 {
- "updated": "2026-06-29T21:57:17.965Z",
+ "updated": "2026-06-30T10:44:31.539Z",
  "source": "google-maps-shared-list",
- "count": 334,
+ "count": 335,
  "places": [
+  {
+   "id": "5221393546603250953:6477266526787488732",
+   "name": "Yuen Kee Dumpling 袁记云饺",
+   "lat": 51.5182102,
+   "lng": -0.07891139999999999,
+   "note": null,
+   "tags": [],
+   "area": "Spitalfields",
+   "address": "122 Middlesex St, London E1 7HY, UK",
+   "cuisine": null,
+   "rating": 4.2,
+   "ratingCount": 48,
+   "price": null,
+   "placeId": "ChIJCcXNOcQddkgR3EuyjJbf41k",
+   "mapsUrl": "https://maps.google.com/?cid=6477266526787488732&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Yuen Kee Dumplings lands in London.\nFrom China with many overseas outlets that are extremely popular especially in Singapore.\nOutside it looks like a small shop to buy dumplings…",
+    "First time there for dumplings tastes good only the topping I chose not what I’m expecting, next time I will try again with chicken soup",
+    "The portion size and price are fantastic for what you get! I wish it was a tad cheaper, but still totally worth checking out.\n\nThe service was okay, but the downstairs area is s…"
+   ]
+  },
   {
    "id": "5221392874280685957:8813275917528147258",
    "name": "Lodestar Coffee",
@@ -2986,8 +3009,8 @@
   {
    "id": "5221393079616161697:1016414232230066658",
    "name": "Little Fires",
-   "lat": 51.525078699999995,
-   "lng": -0.07156269999999999,
+   "lat": 51.5250856,
+   "lng": -0.07157039999999999,
    "note": null,
    "tags": [],
    "area": "Shoreditch",
