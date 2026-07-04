@@ -1,8 +1,27 @@
 {
- "updated": "2026-07-03T20:42:42.032Z",
+ "updated": "2026-07-04T08:14:39.543Z",
  "source": "google-maps-shared-list",
- "count": 335,
+ "count": 336,
  "places": [
+  {
+   "id": "5221392411374998395:-3878037827673871184",
+   "name": "Mien Tay",
+   "lat": 51.5301191,
+   "lng": -0.0771203,
+   "note": null,
+   "tags": [],
+   "area": "Hoxton",
+   "address": "Mekong River Delta, Vietnam",
+   "cuisine": null,
+   "rating": null,
+   "ratingCount": null,
+   "price": null,
+   "placeId": "ChIJbe0uUrqboDER5i-a0o8-zaU",
+   "mapsUrl": "https://maps.google.com/?cid=11947274173918359526&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": []
+  },
   {
    "id": "5221393546603250953:6477266526787488732",
    "name": "Yuen Kee Dumpling 袁记云饺",
@@ -3032,8 +3051,8 @@
   {
    "id": "5221390506193745781:1213862716908497279",
    "name": "LEYDI",
-   "lat": 51.516351099999994,
-   "lng": -0.1026132,
+   "lat": 51.516050899999996,
+   "lng": -0.1026115,
    "note": "Turkish brunch with unlimited tea £28",
    "tags": [],
    "area": "Farringdon",
@@ -6586,8 +6605,8 @@
   {
    "id": "5221378052678715733:7564950769553684203",
    "name": "Japan Centre Ichiba",
-   "lat": 51.5097506,
-   "lng": -0.22248079999999998,
+   "lat": 51.509814899999995,
+   "lng": -0.2226182,
    "note": null,
    "tags": [],
    "area": "Shepherd's Bush",
