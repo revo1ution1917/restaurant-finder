@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-07T10:39:49.157Z",
+ "updated": "2026-07-07T18:32:48.376Z",
  "source": "google-maps-shared-list",
  "count": 336,
  "places": [
@@ -7940,8 +7940,8 @@
   {
    "id": "0:2769124788915901509",
    "name": "Kinkally",
-   "lat": 51.5191939,
-   "lng": -0.13564859999999998,
+   "lat": 51.5191902,
+   "lng": -0.1356577,
    "note": "Georgian dumpling place",
    "tags": [
     "georgian dumpling place"
