@@ -1,8 +1,35 @@
 {
- "updated": "2026-07-09T18:52:26.092Z",
+ "updated": "2026-07-10T00:10:34.215Z",
  "source": "google-maps-shared-list",
- "count": 336,
+ "count": 337,
  "places": [
+  {
+   "id": "5221390168423883741:-2830202824584801529",
+   "name": "Erbil Restaurant",
+   "lat": 51.5224858,
+   "lng": -0.1738903,
+   "note": "Iraqi Kurdish",
+   "tags": [
+    "iraqi kurdish"
+   ],
+   "area": "Paddington",
+   "address": "365 Edgware Rd, London W2 1BS, UK",
+   "cuisine": "Middle Eastern",
+   "rating": 4.2,
+   "ratingCount": 888,
+   "price": 1,
+   "placeId": "ChIJ3WOfrrEadkgRB9NQroYZudg",
+   "mapsUrl": "https://maps.google.com/?cid=15616541249124750087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Had dinner at this amazing place which was suggested by my friend who has been here plenty times. It is a family run restaurant with very welcoming and loving people\n\nYoure gree…",
+    "Without any exaggeration, this is the best grilled meat I’ve ever eaten in London. We ordered only two lamp nick dishes and we got loads of appetizers and side dishes like Bammy…",
+    "Very affordable tasty food and friendly staff. The portion sizes are very generous so be careful not to over order!"
+   ]
+  },
   {
    "id": "5221392411374998395:-3878037827673871184",
    "name": "Mien Tay",
