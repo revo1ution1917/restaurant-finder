@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-12T12:03:10.400Z",
+ "updated": "2026-07-12T18:01:44.261Z",
  "source": "google-maps-shared-list",
  "count": 337,
  "places": [
@@ -845,8 +845,8 @@
   {
    "id": "5177080885430750809:-3727031305120234898",
    "name": "Peckham Arches",
-   "lat": 51.4698256,
-   "lng": -0.0699993,
+   "lat": 51.4696019,
+   "lng": -0.0696135,
    "note": "Angeles tacos - amazing",
    "tags": [
     "angeles tacos - amazing"
@@ -1432,8 +1432,8 @@
   {
    "id": "5221392411832924617:9141995545310714516",
    "name": "Sông Quê Café",
-   "lat": 51.5308092,
-   "lng": -0.0769859,
+   "lat": 51.530800899999996,
+   "lng": -0.0768562,
    "note": null,
    "tags": [],
    "area": "Hoxton",
