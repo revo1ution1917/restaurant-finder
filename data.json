@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-12T07:30:58.126Z",
+ "updated": "2026-07-12T12:03:10.400Z",
  "source": "google-maps-shared-list",
  "count": 337,
  "places": [
@@ -7838,8 +7838,8 @@
   {
    "id": "5221392851372207993:-8680578644334876272",
    "name": "HOKO Hong Kong Cafe",
-   "lat": 51.5246384,
-   "lng": -0.07153709999999999,
+   "lat": 51.524637899999995,
+   "lng": -0.0715427,
    "note": "Hong Kong restaurant",
    "tags": [
     "hong kong restaurant"
