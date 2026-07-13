@@ -1,8 +1,34 @@
 {
- "updated": "2026-07-13T18:46:28.313Z",
+ "updated": "2026-07-13T23:57:44.780Z",
  "source": "google-maps-shared-list",
- "count": 337,
+ "count": 338,
  "places": [
+  {
+   "id": "5221366115888310943:706507939442247775",
+   "name": "Machiya",
+   "lat": 51.50936,
+   "lng": -0.1319243,
+   "note": null,
+   "tags": [],
+   "area": "Soho",
+   "address": "5 Panton St, London SW1Y 4DL, UK",
+   "cuisine": "Japanese",
+   "rating": 4.6,
+   "ratingCount": 3320,
+   "price": 2,
+   "placeId": "ChIJn6rIg9EEdkgRX8hySToFzgk",
+   "mapsUrl": "https://maps.google.com/?cid=706507939442247775&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Traditional Japanese cuisine — with decor to match — accompanied by cocktails, whiskeys and sakes.",
+   "vibes": [
+    "cozy",
+    "friendly staff"
+   ],
+   "reviews": [
+    "Really good meal and very generous portions. We ordered the pork katsudon, gyudon, wagyu katsu and hibachi ebidon, and everything was tasty and satisfying.\n\nThe rice bowls were …",
+    "I am mystified by the reviews. The service is indeed very friendly - absolutely lovely - and the space is nice. Cozy and comfortable. But the food? Really not great. The ebi tat…",
+    "This is a japanese gem in London. Service was good and friendly. The place is cosy in a tokyo vibe way, cool music. But the food was really good and authentic. The port Katsudon…"
+   ]
+  },
   {
    "id": "5221390168423883741:-2830202824584801529",
    "name": "Erbil Restaurant",
