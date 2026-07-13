@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-13T00:00:00.950Z",
+ "updated": "2026-07-13T08:20:12.830Z",
  "source": "google-maps-shared-list",
  "count": 337,
  "places": [
@@ -4912,8 +4912,8 @@
   {
    "id": "5221392759560384399:-2879669086254049511",
    "name": "YUN Cross Bridge Rice Noodles",
-   "lat": 51.5241948,
-   "lng": -0.0714553,
+   "lat": 51.524195299999995,
+   "lng": -0.0714508,
    "note": "Delicious Chinese/viet vibes noodles - Yunnan province",
    "tags": [],
    "area": "Shoreditch",
@@ -5258,8 +5258,8 @@
   {
    "id": "5221392419482718567:848807516777364633",
    "name": "moko made cafe",
-   "lat": 51.533687199999996,
-   "lng": -0.0773346,
+   "lat": 51.5336891,
+   "lng": -0.0773195,
    "note": null,
    "tags": [],
    "area": "Hoxton",
