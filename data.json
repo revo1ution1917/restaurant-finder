@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-12T18:01:44.261Z",
+ "updated": "2026-07-13T00:00:00.950Z",
  "source": "google-maps-shared-list",
  "count": 337,
  "places": [
@@ -2901,8 +2901,8 @@
   {
    "id": "5221366923890249211:4882930144614437650",
    "name": "Red Room",
-   "lat": 51.510168699999994,
-   "lng": -0.1495463,
+   "lat": 51.510157,
+   "lng": -0.1496064,
    "note": "Cocktail bar that looks like art gallery",
    "tags": [],
    "area": "Mayfair",
