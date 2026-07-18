@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-18T11:56:26.617Z",
+ "updated": "2026-07-18T17:58:57.231Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -4782,8 +4782,8 @@
   {
    "id": "5221392735398737877:2983153719294528283",
    "name": "Mad Cats",
-   "lat": 51.5248201,
-   "lng": -0.0724028,
+   "lat": 51.5248229,
+   "lng": -0.0724036,
    "note": null,
    "tags": [],
    "area": "Shoreditch",
