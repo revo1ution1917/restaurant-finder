@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-18T07:01:54.923Z",
+ "updated": "2026-07-18T11:56:26.617Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -298,8 +298,8 @@
   {
    "id": "5221366091206566155:8434795708837309415",
    "name": "Simpson's in the Strand",
-   "lat": 51.510613799999994,
-   "lng": -0.12054959999999999,
+   "lat": 51.5106677,
+   "lng": -0.1206365,
    "note": null,
    "tags": [],
    "area": "Covent Garden",
@@ -1483,8 +1483,8 @@
   {
    "id": "5221390827819384889:-3516155317469889902",
    "name": "The Plimsoll",
-   "lat": 51.562034,
-   "lng": -0.1050721,
+   "lat": 51.5620146,
+   "lng": -0.1051081,
    "note": "Cheeseburger",
    "tags": [
     "cheeseburger"
@@ -5643,8 +5643,8 @@
   {
    "id": "5221392966135499669:-5168430923112472425",
    "name": "Route Broadway Market",
-   "lat": 51.5373544,
-   "lng": -0.0611161,
+   "lat": 51.537348699999995,
+   "lng": -0.061105299999999994,
    "note": "Incredible brunch with Turkish twang",
    "tags": [],
    "area": "London Fields",
