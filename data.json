@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-18T23:58:19.992Z",
+ "updated": "2026-07-19T07:29:24.170Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -151,8 +151,8 @@
   {
    "id": "5221393735147136327:8121709736141778865",
    "name": "Planque",
-   "lat": 51.538389699999996,
-   "lng": -0.075823,
+   "lat": 51.5384002,
+   "lng": -0.0758261,
    "note": null,
    "tags": [],
    "area": "Haggerston",
