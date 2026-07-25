@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-25T00:08:56.529Z",
+ "updated": "2026-07-25T07:21:46.647Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -3231,8 +3231,8 @@
   {
    "id": "5221366636273062769:2459256626157893667",
    "name": "Colbeh Restaurant",
-   "lat": 51.514818299999995,
-   "lng": -0.16498849999999998,
+   "lat": 51.5148182,
+   "lng": -0.16498859999999999,
    "note": null,
    "tags": [],
    "area": "Paddington",
