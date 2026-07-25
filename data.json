@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-25T07:21:46.647Z",
+ "updated": "2026-07-25T12:05:05.328Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -6412,8 +6412,8 @@
   {
    "id": "5221390311222598559:-1193520066863203926",
    "name": "Paul Rothe & Son",
-   "lat": 51.5168464,
-   "lng": -0.1507166,
+   "lat": 51.5168469,
+   "lng": -0.150714,
    "note": "Old sandwich deli",
    "tags": [
     "old sandwich deli"
