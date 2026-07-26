@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-26T00:03:50.157Z",
+ "updated": "2026-07-26T07:38:39.712Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -4531,7 +4531,7 @@
    "id": "5221366118861755685:4397905030824145467",
    "name": "Misato",
    "lat": 51.5108557,
-   "lng": -0.1318504,
+   "lng": -0.13185049999999998,
    "note": "Cheap but good Japanese",
    "tags": [
     "cheap but good japanese"
