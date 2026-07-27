@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-27T08:35:51.520Z",
+ "updated": "2026-07-27T13:41:24.155Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -3640,8 +3640,8 @@
   {
    "id": "5221379510092436807:5439791271189356713",
    "name": "Pretty Boy Tacos",
-   "lat": 51.5149481,
-   "lng": -0.20455379999999998,
+   "lat": 51.5149477,
+   "lng": -0.20455569999999998,
    "note": null,
    "tags": [],
    "area": "Notting Hill",
