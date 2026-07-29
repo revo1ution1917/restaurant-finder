@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-29T07:46:54.824Z",
+ "updated": "2026-07-29T13:04:12.132Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -6681,8 +6681,8 @@
   {
    "id": "5221393521831533345:4250582062794412619",
    "name": "FORNO",
-   "lat": 51.5346048,
-   "lng": -0.0577723,
+   "lat": 51.534602899999996,
+   "lng": -0.0577733,
    "note": null,
    "tags": [],
    "area": "London Fields",
