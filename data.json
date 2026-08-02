@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-02T07:34:21.790Z",
+ "updated": "2026-08-02T12:06:42.308Z",
  "source": "google-maps-shared-list",
  "count": 338,
  "places": [
@@ -548,8 +548,8 @@
   {
    "id": "0:1424757161028413542",
    "name": "Dorian Restaurant",
-   "lat": 51.516644799999995,
-   "lng": -0.2006356,
+   "lat": 51.5166451,
+   "lng": -0.2006357,
    "note": null,
    "tags": [],
    "area": "Notting Hill",
