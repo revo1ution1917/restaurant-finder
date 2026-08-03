@@ -1,8 +1,104 @@
 {
- "updated": "2026-08-03T08:33:35.385Z",
+ "updated": "2026-08-03T13:43:56.710Z",
  "source": "google-maps-shared-list",
- "count": 338,
+ "count": 342,
  "places": [
+  {
+   "id": "5221392943834923209:6738074355862184891",
+   "name": "EDAMI",
+   "lat": 51.552540799999996,
+   "lng": -0.0713699,
+   "note": "Lebanese brunch",
+   "tags": [
+    "lebanese brunch"
+   ],
+   "area": "Dalston",
+   "address": "Unit Ab004, 73-75 Shacklewell Ln, London E8 2EB, UK",
+   "cuisine": "Bakery",
+   "rating": 4.8,
+   "ratingCount": 82,
+   "price": null,
+   "placeId": "ChIJyQAD4jcddkgRu6NVQ-1ygl0",
+   "mapsUrl": "https://maps.google.com/?cid=6738074355862184891&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "The most authentic Lebanese bakery you’ll experience in East London and a true hidden gem. I could smell the zaatar as I turned the corner to find the place. I ordered a zaatar …",
+    "I recently tried Edami and had a really enjoyable experience! The food felt authentic and freshly made, especially the manakish—perfectly baked with a soft, airy crust and just …",
+    "As a Lebanese living in london for over 5 years now, this place feels beyond anything I’ve found so far in London.\n\nInterior: The interior is brilliantly chosen - from pictures …"
+   ]
+  },
+  {
+   "id": "5221378056453848811:-9036569590851594248",
+   "name": "Garden Bar Grill and Smokehouse by Cue Point London",
+   "lat": 51.513028299999995,
+   "lng": -0.21794229999999998,
+   "note": null,
+   "tags": [],
+   "area": "Ladbroke Grove",
+   "address": "41 Bramley Rd, London W10 6SZ, UK",
+   "cuisine": "BBQ",
+   "rating": 3.7,
+   "ratingCount": 153,
+   "price": null,
+   "placeId": "ChIJ637zpK0PdkgR-JcxvdWnl4I",
+   "mapsUrl": "https://maps.google.com/?cid=9410174482857957368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "outdoor seating"
+   ],
+   "reviews": [
+    "This came to my attention because of its social media popularity. The concept of Afghan Texan barbecue is very interesting so we got there, unfortunately an hour earlier than th…",
+    "Like many others, i saw a reel online about the re-opening of Cue Point and Afghan Texas Bbq sounded very interesting and inviting; so i immediately made a booking for 10 days l…",
+    "Mursal & Joshua have gone West from East  in more ways than one, bringing exceptional Afghan BBQ to West London as a hidden gem with big, bold BBQ that will have you salivating!…"
+   ]
+  },
+  {
+   "id": "5221367188897837127:-1113305077735716795",
+   "name": "Oudh 1722",
+   "lat": 51.5041072,
+   "lng": -0.09498179999999999,
+   "note": null,
+   "tags": [],
+   "area": "Borough",
+   "address": "66 Union St, London SE1 1TD, UK",
+   "cuisine": "Indian",
+   "rating": 4.8,
+   "ratingCount": 187,
+   "price": null,
+   "placeId": "ChIJR7AiWMsFdkgRRYjsKu6-jPA",
+   "mapsUrl": "https://maps.google.com/?cid=17333438995973834821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "We had lunch at Oudh 1722 and were really impressed. Although it's a fairly new restaurant, everything about the experience was excellent.\nThe staff were fantastic—friendly, att…",
+    "I was really excited about Akhtar Islam finally opening in London, and I’m pleased to say it completely lived up to expectations.\n\nWe definitely over ordered, but every dish was…",
+    "Really special meal with great company. What more could you ask for. The place really lived up to its hype. All the dishes were fabulous. Special shout out to the Oxtail biryani…"
+   ]
+  },
+  {
+   "id": "5221392862844437661:-6364246315818964452",
+   "name": "Hon's BBQ",
+   "lat": 51.542873199999995,
+   "lng": -0.0220619,
+   "note": null,
+   "tags": [],
+   "area": "Hackney Wick",
+   "address": "First floor, Unit 7, The white building, Queen's Yard, London E9 5EN, UK",
+   "cuisine": "BBQ",
+   "rating": 4.5,
+   "ratingCount": 403,
+   "price": null,
+   "placeId": "ChIJnUSaBiUddkgRHKqF6rGnrac",
+   "mapsUrl": "https://maps.google.com/?cid=12082497757890587164&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Amazing find in london Hackney Wick. I came to uncle hons around 2 months ago and forgot to post but should have as the food was amazing. Blending Chinese and American cuisine t…",
+    "We had a delicious meal. It’s more of a canteen/very casual dining. DJ set, obvs!\n\nStaff were superb. Particularly the person behind the bar. It was really quiet for a weekend.\n…",
+    "Food was exquisitely prepared, and the flavours were rich, yet possessing hidden subtleties. The meal was a testament to Uncle Hon's mastery of the Texan pit, as well as the sea…"
+   ]
+  },
   {
    "id": "5221366115888310943:706507939442247775",
    "name": "Machiya",
