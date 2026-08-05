@@ -1,8 +1,109 @@
 {
- "updated": "2026-08-05T07:43:52.439Z",
+ "updated": "2026-08-05T12:57:50.952Z",
  "source": "google-maps-shared-list",
- "count": 342,
+ "count": 346,
  "places": [
+  {
+   "id": "5221393497512223095:-2212716265260078545",
+   "name": "Bakery HOKO",
+   "lat": 51.5252536,
+   "lng": -0.070507,
+   "note": null,
+   "tags": [],
+   "area": "Shoreditch",
+   "address": "152-154, Bethnal Grn Rd, London E2 6DG, UK",
+   "cuisine": "Bakery",
+   "rating": 5,
+   "ratingCount": 15,
+   "price": null,
+   "placeId": "ChIJdyHAy7gddkgRL6pxvEfaSuE",
+   "mapsUrl": "https://maps.google.com/?cid=16234027808449473071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Tried the custard tarts - really fresh and came in a nice takeaway box. Welcome to the neighbourhood.",
+    "If you want a Hong Kong style bakery without having to go to Chinatown this is THE place. We had a fluffy pineapple bun, egg tart and char siu bun. Reminds me of childhood holid…",
+    "The team behind HOKO have just opened a NEW BAKERY, serving simple but authentic baked goods, just as you'd find them in Hong Kong.\n\nEverything we tried:\n\nPineapple Bun with But…"
+   ]
+  },
+  {
+   "id": "5221367021287965687:8655409447685629783",
+   "name": "Ambassadors Clubhouse",
+   "lat": 51.5110982,
+   "lng": -0.1397908,
+   "note": null,
+   "tags": [],
+   "area": "Soho",
+   "address": "25 Heddon St, London W1B 4BH, UK",
+   "cuisine": "Pakistani",
+   "rating": 4.6,
+   "ratingCount": 1985,
+   "price": 4,
+   "placeId": "ChIJ9wPPUaQFdkgRV6fcyggxHng",
+   "mapsUrl": "https://maps.google.com/?cid=8655409447685629783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff",
+    "special occasion"
+   ],
+   "reviews": [
+    "Incredible Punjabi cuisine. Came here for my wife’s birthday dinner and from the moment we go there, everyone treated us so well.\n\nPranav looked after us for the evening, and he…",
+    "The venue is truly luxurious, with a captivating and elegant interior design. We made our reservation through Google and were warmly welcomed upon arrival.\n\nWe were seated in th…",
+    "We celebrated a birthday and beyond at The Ambassadors Clubhouse, and it was a wonderful, memorable evening.\nThe Highlights:\nThe food had some incredible standouts. We absolutel…"
+   ]
+  },
+  {
+   "id": "5221366336999384989:-6844128971068168102",
+   "name": "Qima Café and Pâtisserie - Covent Garden",
+   "lat": 51.5112005,
+   "lng": -0.1262055,
+   "note": null,
+   "tags": [],
+   "area": "Covent Garden",
+   "address": "21-22 New Row, London WC2N 4LE, UK",
+   "cuisine": "Café",
+   "rating": 4.3,
+   "ratingCount": 813,
+   "price": 2,
+   "placeId": "ChIJnecH_wQFdkgRWqiFavbEBKE",
+   "mapsUrl": "https://maps.google.com/?cid=11602615102641383514&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "cozy",
+    "friendly staff",
+    "outdoor seating"
+   ],
+   "reviews": [
+    "Dana made my experience better than I expected.\n\nHad an absolutely wonderful experience at Qima Cafe & Patisserie in Covent Garden. From the moment we walked in, the atmosphere …",
+    "Everything is great but needs 1 more wait staff and kitchen staff to really provide seamless operation. I\n’ve been wanting to visit this cafe since 2024 when I saw their Instagr…",
+    "Such a cozy and unique café experience 🤍\nA Yemeni coffee spot with creative coffee mixes and an amazing brunch menu. The atmosphere was warm and inviting, and the staff were in…"
+   ]
+  },
+  {
+   "id": "5221366436581395453:176602334259792558",
+   "name": "Dim Sum Library",
+   "lat": 51.5122747,
+   "lng": -0.1262762,
+   "note": null,
+   "tags": [],
+   "area": "Covent Garden",
+   "address": "136 Long Acre, London WC2E 9AD, UK",
+   "cuisine": "Chinese",
+   "rating": 4.7,
+   "ratingCount": 1396,
+   "price": 2,
+   "placeId": "ChIJ_cuULhwFdkgRrkoPKONqcwI",
+   "mapsUrl": "https://maps.google.com/?cid=176602334259792558&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Went there for the dim sum afternoon tea and ended up ordering roast pork cheong fan and Hongkong style mango pudding. The food was great! They look pretty and tastes wonderful!…",
+    "Highly recommend this place. I’ve been here twice and had excellent experience. Love the Mapo Tofu and Black Truffle Chicken. Also shout out to Rufus and Sasha, who hosted us. T…",
+    "My first visit here about six months ago with three other people was great! The place felt clean and new, which was a nice first impression. The menu is really extensive and off…"
+   ]
+  },
   {
    "id": "5221392943834923209:6738074355862184891",
    "name": "EDAMI",
