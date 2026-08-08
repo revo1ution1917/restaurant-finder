@@ -1,8 +1,27 @@
 {
- "updated": "2026-08-08T11:33:30.044Z",
+ "updated": "2026-08-08T17:35:38.020Z",
  "source": "google-maps-shared-list",
- "count": 346,
+ "count": 347,
  "places": [
+  {
+   "id": "5221393012071101975:-7975608606757490213",
+   "name": "Azra Kitchen Ltd",
+   "lat": 51.5702996,
+   "lng": -0.0092733,
+   "note": null,
+   "tags": [],
+   "area": "Leyton",
+   "address": "Arch 136 Tilbury Rd, London E10 6RE, UK",
+   "cuisine": "Afghan",
+   "rating": null,
+   "ratingCount": null,
+   "price": null,
+   "placeId": "ChIJF3Y0xUcddkgR2_GrjjryUJE",
+   "mapsUrl": "https://maps.google.com/?cid=10471135466952061403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": []
+  },
   {
    "id": "5221393497512223095:-2212716265260078545",
    "name": "Bakery HOKO",
