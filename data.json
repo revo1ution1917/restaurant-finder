@@ -1,8 +1,33 @@
 {
- "updated": "2026-08-13T06:19:56.996Z",
+ "updated": "2026-08-13T11:51:58.068Z",
  "source": "google-maps-shared-list",
- "count": 347,
+ "count": 348,
  "places": [
+  {
+   "id": "5221393723355618171:1965672653285574766",
+   "name": "Paper Tiger",
+   "lat": 51.539718199999996,
+   "lng": -0.0562355,
+   "note": null,
+   "tags": [],
+   "area": "London Fields",
+   "address": "161 Mare St, London E8 3RH, UK",
+   "cuisine": "Chinese",
+   "rating": 4.9,
+   "ratingCount": 132,
+   "price": 2,
+   "placeId": "ChIJe9sQYe0ddkgRbkjJE914Rxs",
+   "mapsUrl": "https://maps.google.com/?cid=1965672653285574766&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Such a Lovely team. Nice authentic chinese menu. Super tasty double fried chicken. The aubergine is a must have. Dumpling deal is a good one.\nWill be back for sure. Thank’s Lili…",
+    "Had dinner last and had the chance to order several dishes. All delicious. Fried rice, garlicky aubergine, spring rolls, and the excellent pork and cabbage dumplings. Great punc…",
+    "Amazing food and such a lovely team! The dumplings were absolutely delicious, and the smashed cucumber was so refreshing and addictive. The cold pints were the perfect addition …"
+   ]
+  },
   {
    "id": "5221393012071101975:-7975608606757490213",
    "name": "Azra Kitchen Ltd",
