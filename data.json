@@ -1,8 +1,33 @@
 {
- "updated": "2026-08-16T05:32:44.200Z",
+ "updated": "2026-08-16T11:24:46.304Z",
  "source": "google-maps-shared-list",
- "count": 348,
+ "count": 349,
  "places": [
+  {
+   "id": "5221364817733185367:7269133324373072299",
+   "name": "Cantina Boccone",
+   "lat": 51.478404999999995,
+   "lng": -0.0270551,
+   "note": null,
+   "tags": [],
+   "area": "Deptford",
+   "address": "Arch 8 Deptford Market Yard, London SE8 4BX, UK",
+   "cuisine": "Wine bar",
+   "rating": 4.9,
+   "ratingCount": 67,
+   "price": 2,
+   "placeId": "ChIJV2-1Q6MDdkgRqxk2uD4m4WQ",
+   "mapsUrl": "https://maps.google.com/?cid=7269133324373072299&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Loved the service, really friendly and welcoming. Great food and wine too. Pretty pricey but they use quality ingredients.",
+    "Such a great place.. Excellent wine, great food and wonderful staff. Fantastic suprise location too, had no idea this area existed and was so exciting. Definitely need to go bac…",
+    "Fantastic wine bar with delicious small plates. We ordered the bresaola, chourico, and the bacalhau meia desfeita. All of which paired perfectly with the house red. Lovely owner…"
+   ]
+  },
   {
    "id": "5221393723355618171:1965672653285574766",
    "name": "Paper Tiger",
