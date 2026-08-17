@@ -1,8 +1,33 @@
 {
- "updated": "2026-08-17T11:30:22.241Z",
+ "updated": "2026-08-17T17:31:01.344Z",
  "source": "google-maps-shared-list",
- "count": 349,
+ "count": 350,
  "places": [
+  {
+   "id": "5221390597676429483:7387980160826735571",
+   "name": "Vesper Restaurant",
+   "lat": 51.525188,
+   "lng": -0.11008609999999999,
+   "note": null,
+   "tags": [],
+   "area": "Clerkenwell",
+   "address": "8-10 Exmouth Market, London EC1R 4QA, UK",
+   "cuisine": null,
+   "rating": 4.6,
+   "ratingCount": 53,
+   "price": null,
+   "placeId": "ChIJq3ARoBUbdkgR0_u1JdBgh2Y",
+   "mapsUrl": "https://maps.google.com/?cid=7387980160826735571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Went here for a birthday meal in August 2026.\nThe staff were a sheer delight from the moment we arrived. The drinks and food is exceptional. The venue is really nice too.\nHighly…",
+    "Food was outstanding! There wasn’t a single item on the menu I didn’t want.\n\nService was perfect. Knowledge staff and perfectly attentive.\n\nOff menu is the burger from Dove, whi…",
+    "We chose to share 'all the starters' and it was perfect for a summer lunch. The cured trout with raspberry and peas was both colourful and delicious, a great combination of flav…"
+   ]
+  },
   {
    "id": "5221364817733185367:7269133324373072299",
    "name": "Cantina Boccone",
