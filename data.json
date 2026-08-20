@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-19T23:26:56.472Z",
+ "updated": "2026-08-20T05:35:09.605Z",
  "source": "google-maps-shared-list",
  "count": 350,
  "places": [
@@ -5024,8 +5024,8 @@
   {
    "id": "5221390930462483101:-8476745716566127201",
    "name": "The Canonbury Tavern",
-   "lat": 51.5447193,
-   "lng": -0.0975582,
+   "lat": 51.5447285,
+   "lng": -0.09755499999999999,
    "note": "Pub with beer garden loved by George Orwell",
    "tags": [],
    "area": "Canonbury",
