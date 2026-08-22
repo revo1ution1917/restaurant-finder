@@ -1,8 +1,275 @@
 {
- "updated": "2026-08-22T11:24:47.152Z",
+ "updated": "2026-08-22T17:25:07.827Z",
  "source": "google-maps-shared-list",
- "count": 350,
+ "count": 361,
  "places": [
+  {
+   "id": "5221393125749149063:-4835769529244321344",
+   "name": "Barge East",
+   "lat": 51.5421857,
+   "lng": -0.0210223,
+   "note": null,
+   "tags": [],
+   "area": "Hackney Wick",
+   "address": "River Lee, Sweetwater Mooring, White Post Ln, London E9 5EN, UK",
+   "cuisine": "Wine bar",
+   "rating": 4.4,
+   "ratingCount": 1874,
+   "price": 3,
+   "placeId": "ChIJh83xPGIddkgRwPm78Tvl47w",
+   "mapsUrl": "https://maps.google.com/?cid=13610974544465230272&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Floating dining room with rustic decor offering seasonal fare with coffee, cocktails, beer & cider.",
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Phenomenal Sunday Roast at Barge East’s main restaurant! The star of the show was the pork belly roast which was mouthwatering and literally melting on the tongue, alongside an …",
+    "We recently hosted a surprise 40th birthday dinner in the Canopy Room at Barge East and honestly could not have asked for a more perfect experience from start to finish.\n\nA huge…",
+    "What a wonderful place! BEST Sunday roast we've had in a very long time. Huge plates of food - the shallot tart was glorious. Still feel stuffed 5 hours later. Thank you for squ…"
+   ]
+  },
+  {
+   "id": "5221392759501071137:5067495704235773607",
+   "name": "ACE Pizza Victoria Park",
+   "lat": 51.5371332,
+   "lng": -0.0448432,
+   "note": null,
+   "tags": [],
+   "area": "Victoria Park",
+   "address": "126-128 Lauriston Rd, London E9 7LH, UK",
+   "cuisine": "Pizza",
+   "rating": 4.9,
+   "ratingCount": 811,
+   "price": 2,
+   "placeId": "ChIJIaPb9gwddkgRp47Kh35cU0Y",
+   "mapsUrl": "https://maps.google.com/?cid=5067495704235773607&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Outstanding pizza—definitely one of the best in London, 10/10! The table service was also good.\n\nHowever, the host policy makes no sense. We showed up around 8:00 PM on a quiet …",
+    "Genuinely the best tasting pizza I’ve had. Big statement!! The base is soft and chewy with a delicious sourdough flavour. The tomato sauce tastes so fresh. I cannot fault the fo…",
+    "The food was amazing. We loved everything we ordered really. Service was quite good as well.\nI think the only low I can mention is the at they charge for water. There will be a …"
+   ]
+  },
+  {
+   "id": "5221393199955189879:-43097311041714757",
+   "name": "Behind Restaurant",
+   "lat": 51.5392655,
+   "lng": -0.0574991,
+   "note": null,
+   "tags": [],
+   "area": "London Fields",
+   "address": "20 Sidworth St, London E8 3SD, UK",
+   "cuisine": "Seafood",
+   "rating": 4.7,
+   "ratingCount": 781,
+   "price": 4,
+   "placeId": "ChIJdyD4g3MddkgRu4WVVDnjZv8",
+   "mapsUrl": "https://maps.google.com/?cid=18403646762667836859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Seasonal seafood tasting menus offered in a compact, acclaimed destination that has a wine bar.",
+   "vibes": [
+    "elegant",
+    "friendly staff"
+   ],
+   "reviews": [
+    "Behind was, without question, the best Michelin one-star restaurant I have ever experienced—easily on par with many two-star restaurants.\n\nThe 10-course tasting menu was excepti…",
+    "A truly outstanding seafood tasting menu in a great setting. Course after course of perfectly curated dishes, bursting with flavour and texture. Stand out dishes featured grey m…",
+    "I rarely leave negative reviews, but this experience genuinely warrants one. We dined at Behind expecting a polished, high-end tasting menu but sadly the reality fell far short,…"
+   ]
+  },
+  {
+   "id": "5221392673723262857:5018592865447954558",
+   "name": "UCHI",
+   "lat": 51.5537098,
+   "lng": -0.055978999999999994,
+   "note": null,
+   "tags": [],
+   "area": "Clapton",
+   "address": "144 Clarence Rd, Lower Clapton, London E5 8DY, UK",
+   "cuisine": "Japanese",
+   "rating": 4.2,
+   "ratingCount": 660,
+   "price": 3,
+   "placeId": "ChIJiSca_vgcdkgRfshVGZ-fpUU",
+   "mapsUrl": "https://maps.google.com/?cid=5018592865447954558&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Rustic-chic Japanese bistro prepping elevated sushi, nigiri & sashimi, plus grilled skewers.",
+   "vibes": [
+    "quiet"
+   ],
+   "reviews": [
+    "Great dinning experience ! The place is super aesthetics. Perfect for pics. The food is delicious as well and the service was perfect. I really want to try the cafe, tea house, …",
+    "Food was alright, nothing special and no complaints at all re: service but it was absurd how high the prices were for the portions we were getting. A tiny portion of rice was £4…",
+    "Sadly not as good as it used to be. Overpriced for quality of food and location. The restaurant is still pretty and staff were friendly. The robata items such as the pork belly …"
+   ]
+  },
+  {
+   "id": "5221392553594935461:7840430566436248162",
+   "name": "BISTROTHEQUE",
+   "lat": 51.534121299999995,
+   "lng": -0.0559147,
+   "note": null,
+   "tags": [],
+   "area": "London Fields",
+   "address": "23-27 Wadeson St, London E2 9DR, UK",
+   "cuisine": "Bar",
+   "rating": 4.6,
+   "ratingCount": 1210,
+   "price": 3,
+   "placeId": "ChIJpVjlBd0cdkgRYhqMTg_Ozmw",
+   "mapsUrl": "https://maps.google.com/?cid=7840430566436248162&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Modern European restaurant in white-painted converted warehouse, with bar & private dining room.",
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Going to list the Pros then the cons.\n\nPros: the vibe was really good. It was very loud because of large groups so we asked to be moved to a quieter table which was great.\nThe f…",
+    "BISTROTHEQUE, wow, what a restaurant. Some of the best food we’ve had in London.\n\nFrom the moment we started, the semolina sourdough with garlic butter and hot honey was outstan…",
+    "We had a dinner party facilitated by David’s amazing team (Vy, Julio, and their amazing chef) The first time we solicited professionals for an elevated experience and unsure if …"
+   ]
+  },
+  {
+   "id": "5221392882159095797:322680184890970814",
+   "name": "Hai Cafe",
+   "lat": 51.554007,
+   "lng": -0.053599,
+   "note": null,
+   "tags": [],
+   "area": "Clapton",
+   "address": "120b Lower Clapton Rd, Lower Clapton, London E5 0QR, UK",
+   "cuisine": "Vietnamese",
+   "rating": 4.9,
+   "ratingCount": 462,
+   "price": 2,
+   "placeId": "ChIJ9Y_YhSkddkgRvtJ7JOtjegQ",
+   "mapsUrl": "https://maps.google.com/?cid=322680184890970814&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "absolutely scrumptious home style vietnamese food (shared the prawn summer rolls and the chicken curry which was more than enough), defo coming again\n\nwill just say it’s more so…",
+    "Unbelievable service, absolutely delicious food.\nBlown away. Could’ve drank the curry sauce and slurped up another 3 bowls of veg tofu bun. Summer rolls were a must, and the pea…",
+    "What a most delightful lil restaurant! Food is so delicious and colourful, and people amazing , thankyou!"
+   ]
+  },
+  {
+   "id": "5221393077895421471:5676509032482960674",
+   "name": "INIS",
+   "lat": 51.5410913,
+   "lng": -0.0229543,
+   "note": null,
+   "tags": [],
+   "area": "Hackney Wick",
+   "address": "13 Rookwood Way, Fish Island, London E3 2XT, UK",
+   "cuisine": null,
+   "rating": 4.7,
+   "ratingCount": 426,
+   "price": 2,
+   "placeId": "ChIJH96jGFcddkgRInVxveMCx04",
+   "mapsUrl": "https://maps.google.com/?cid=5676509032482960674&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Lovely little independent restaurant on the canal with incredible food, a great atmosphere and the best service!\n\nNothing is ever too much for Lindsay and the rest of the staff,…",
+    "Really tasty food. The fish dishes in particular were delicious. Really warm atmosphere from the staff, and a great wine list - what more do you want!",
+    "Such a good spot! Guinness cake was so excellent, as was everything else we tried. Great menu and lovely service."
+   ]
+  },
+  {
+   "id": "5221392686879012601:-5834722015082684336",
+   "name": "Elephant Hackney",
+   "lat": 51.5509299,
+   "lng": -0.052290699999999996,
+   "note": null,
+   "tags": [],
+   "area": "Hackney",
+   "address": "43 Lower Clapton Rd, Lower Clapton, London E5 0NS, UK",
+   "cuisine": "Pizza",
+   "rating": 4.4,
+   "ratingCount": 290,
+   "price": 2,
+   "placeId": "ChIJ-fY-DvwcdkgRUGDYrz3nBq8",
+   "mapsUrl": "https://maps.google.com/?cid=12612022058626867280&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Low-lit brasserie with stripped walls and banquettes, for French-inspired menu and cocktails.",
+   "vibes": [
+    "casual",
+    "friendly staff"
+   ],
+   "reviews": [
+    "Really loved the vibe of this place super relaxing and chilled, restaurant lit by candlelight. Have a really nice variety on the menu and everything we got was delicious and pac…",
+    "I came here with my partner to celebrate a birthday, and this restaurant was truly outstanding. The atmosphere was magical, with a slightly medieval feel, and the staff were pro…",
+    "Such a lovely spot for a cosy little supper - beautiful decor and tables, well curated wine and cocktail lists, delicious pizza with light crust and imaginative toppings, friend…"
+   ]
+  },
+  {
+   "id": "5221393097739986805:6506434978151372664",
+   "name": "Shankeys",
+   "lat": 51.5439224,
+   "lng": -0.047201,
+   "note": null,
+   "tags": [],
+   "area": "Hackney",
+   "address": "221 Well St, London E9 6RG, UK",
+   "cuisine": null,
+   "rating": 4.9,
+   "ratingCount": 503,
+   "price": 2,
+   "placeId": "ChIJded3t1sddkgReJfj2iOAS1o",
+   "mapsUrl": "https://maps.google.com/?cid=6506434978151372664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "Though the menu is small, it’s carefully curated and the flavour is exquisite. Also a great selection of wine and cocktails. Indian and Irish is a combination I’d never come acr…",
+    "If you are a foodie, you have to eat here. At first we thought Irish and Indian was a bizarre combination but after eating there we now know it WERKS. We had a table of 4 people…",
+    "Such a cool little restaurant. Feels very cosy and homely in there. Some really interesting and unique cocktails and incredible food, some stuff I’d never eaten before for sure.…"
+   ]
+  },
+  {
+   "id": "5221392705277119323:3484069480625510023",
+   "name": "Albers",
+   "lat": 51.5426018,
+   "lng": -0.0800135,
+   "note": null,
+   "tags": [],
+   "area": "De Beauvoir",
+   "address": "23A Englefield Rd, London N1 4JX, UK",
+   "cuisine": null,
+   "rating": 4.6,
+   "ratingCount": 176,
+   "price": 2,
+   "placeId": "ChIJW8vbVgAddkgRh5Z2tbvmWTA",
+   "mapsUrl": "https://maps.google.com/?cid=3484069480625510023&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "Good was pretty good, and it was actually the madeleines that stole the show! A really nice place to have a delicious meal. Atmosphere and decor were great, as was the service.",
+    "A fantastic menu, friendly service and a great ambiance in Albers, I wish it was my neighbourhood restaurant. Highly recommended.",
+    "The perfect neighbourhood restaurant. A regularly changing menu of seasonal highlights that’s always exciting. It’s the kind of cooking that would cause a stir in Notting Hill o…"
+   ]
+  },
+  {
+   "id": "5221393707067080201:-8762696222955152398",
+   "name": "Cafe Cecilia",
+   "lat": 51.534548799999996,
+   "lng": -0.060132,
+   "note": null,
+   "tags": [],
+   "area": "London Fields",
+   "address": "32 Andrews Rd, London E8 4FX, UK",
+   "cuisine": null,
+   "rating": 4.5,
+   "ratingCount": 544,
+   "price": 2,
+   "placeId": "ChIJCX4xlukddkgR8tsZRDamZIY",
+   "mapsUrl": "https://maps.google.com/?cid=9684047850754399218&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": "Stylish, contemporary hangout crafting breakfast & lunch, including baked goods & gourmet plates.",
+   "vibes": [],
+   "reviews": [
+    "Had a fantastic solo lunch at Café Cecilia today. Started with the mince on fried bread with horseradish crème fraîche, which was rich, comforting and full of flavour. For the m…",
+    "Very cozy restaurant next to canal in a new build. Simple inside, but with tasty food and great selection of vine. Perfect for a cozy date or casual dinner.\nThough it is popular…",
+    "Great restaurant and Gorgeous meal! I’m coeliac and team catered for me so well, marking up a menu, offering alternatives and talking me through everything! Super impressed.\nI w…"
+   ]
+  },
   {
    "id": "5221390597676429483:7387980160826735571",
    "name": "Vesper Restaurant",
