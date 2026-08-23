@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-23T05:33:30.605Z",
+ "updated": "2026-08-23T11:25:11.433Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -6669,8 +6669,8 @@
   {
    "id": "5221393310782200537:-4127227573925736635",
    "name": "London Night Cafe",
-   "lat": 51.5160207,
-   "lng": -0.07591339999999999,
+   "lat": 51.516019799999995,
+   "lng": -0.0759151,
    "note": "£7 entry unlimited tea and biscuits",
    "tags": [],
    "area": "Aldgate",
