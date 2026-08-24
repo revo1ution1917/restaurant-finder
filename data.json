@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-24T11:33:50.336Z",
+ "updated": "2026-08-24T17:34:57.460Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -2111,8 +2111,8 @@
   {
    "id": "5221379707876265779:-6302686197506411379",
    "name": "French Society",
-   "lat": 51.5520761,
-   "lng": -0.19601149999999998,
+   "lat": 51.5521417,
+   "lng": -0.1960421,
    "note": null,
    "tags": [],
    "area": "Kilburn",
