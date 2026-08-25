@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-25T05:35:56.064Z",
+ "updated": "2026-08-25T11:32:54.576Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -617,8 +617,8 @@
   {
    "id": "5221392411374998395:-3878037827673871184",
    "name": "Mien Tay",
-   "lat": 51.5301191,
-   "lng": -0.0771203,
+   "lat": 51.5301155,
+   "lng": -0.0770916,
    "note": null,
    "tags": [],
    "area": "Hoxton",
