@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-26T19:08:51.803Z",
+ "updated": "2026-08-27T04:26:19.395Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -8474,8 +8474,8 @@
   {
    "id": "5221378517709247261:-7985903773895822167",
    "name": "Maramia Cafe",
-   "lat": 51.522616299999996,
-   "lng": -0.2076304,
+   "lat": 51.522645,
+   "lng": -0.2076836,
    "note": "Palestinian restaurant",
    "tags": [
     "palestinian restaurant"
