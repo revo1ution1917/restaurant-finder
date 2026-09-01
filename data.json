@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-01T09:51:10.411Z",
+ "updated": "2026-09-01T15:25:55.126Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -2799,8 +2799,8 @@
   {
    "id": "5221391325288206943:-5902934102937269283",
    "name": "Summer Dumpling",
-   "lat": 51.531686199999996,
-   "lng": -0.10596789999999999,
+   "lat": 51.5316829,
+   "lng": -0.10601769999999999,
    "note": "Dumpling and noodle bar",
    "tags": [
     "dumpling and noodle bar"
