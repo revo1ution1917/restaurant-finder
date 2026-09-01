@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-01T15:25:55.126Z",
+ "updated": "2026-09-01T19:48:20.999Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -6512,8 +6512,8 @@
   {
    "id": "5221390803374396481:-8168116728584667357",
    "name": "Macellaio RC Clerkenwell",
-   "lat": 51.5258979,
-   "lng": -0.1089132,
+   "lat": 51.5259188,
+   "lng": -0.1088531,
    "note": "Steak",
    "tags": [
     "steak"
