@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-06T14:02:38.827Z",
+ "updated": "2026-09-06T18:57:56.943Z",
  "source": "google-maps-shared-list",
  "count": 361,
  "places": [
@@ -1211,8 +1211,8 @@
   {
    "id": "5221392608463759307:5457832706261156056",
    "name": "Chakana London",
-   "lat": 51.536809,
-   "lng": -0.0617799,
+   "lat": 51.5368825,
+   "lng": -0.061953499999999995,
    "note": null,
    "tags": [],
    "area": "London Fields",
