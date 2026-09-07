@@ -1,8 +1,33 @@
 {
- "updated": "2026-09-07T10:01:59.587Z",
+ "updated": "2026-09-07T16:19:52.874Z",
  "source": "google-maps-shared-list",
- "count": 361,
+ "count": 362,
  "places": [
+  {
+   "id": "5221391223730379479:-8653393090375284627",
+   "name": "Cinder - Belsize Park",
+   "lat": 51.549079299999995,
+   "lng": -0.1719002,
+   "note": null,
+   "tags": [],
+   "area": "Hampstead",
+   "address": "66 Belsize Ln, Belsize Park, London NW3 5BJ, UK",
+   "cuisine": null,
+   "rating": 4.6,
+   "ratingCount": 322,
+   "price": 2,
+   "placeId": "ChIJ15rKY6cbdkgRbYhc-tT46Ic",
+   "mapsUrl": "https://maps.google.com/?cid=9793350983334266989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [
+    "friendly staff"
+   ],
+   "reviews": [
+    "A lovely little restaurant with delicious food and very friendly staff. The salmon was especially tasty, perfectly cooked and paired beautifully with the pickled cucumbers. A gr…",
+    "A lovely little restaurant tucked away in the Belsize Park neighborhood. Their menu is simultaneously subtle and rich and delicious. Great atmosphere, cozy dining area, and atte…",
+    "What a gem! Was welcomed warmly. They were fully booked, but could squeeze me in.\nI wasn't planning on a big meal, so that was perfect.\n\nThe salmon was so good! If I was here lo…"
+   ]
+  },
   {
    "id": "5221393125749149063:-4835769529244321344",
    "name": "Barge East",
@@ -1710,8 +1735,8 @@
   {
    "id": "5221390309583836501:3514113171774969310",
    "name": "Nina",
-   "lat": 51.517156299999996,
-   "lng": -0.1514405,
+   "lat": 51.517167199999996,
+   "lng": -0.1514431,
    "note": "Try lemon chicken",
    "tags": [
     "try lemon chicken"
