@@ -1,8 +1,31 @@
 {
- "updated": "2026-09-08T01:02:55.792Z",
+ "updated": "2026-09-08T09:27:36.410Z",
  "source": "google-maps-shared-list",
- "count": 362,
+ "count": 363,
  "places": [
+  {
+   "id": "5221392705310945581:8834790938572970661",
+   "name": "Blinds",
+   "lat": 51.5311685,
+   "lng": -0.0679563,
+   "note": "Wine bar with elite snacks",
+   "tags": [],
+   "area": "Bethnal Green",
+   "address": "124 City Rd, London EC1V 2NX, UK",
+   "cuisine": null,
+   "rating": 4.9,
+   "ratingCount": 145,
+   "price": null,
+   "placeId": "ChIJIwg1Z0QSdkgRjBVSZ0_QbrE",
+   "mapsUrl": "https://maps.google.com/?cid=12785385431605843340&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+   "summary": null,
+   "vibes": [],
+   "reviews": [
+    "I just had my blinds fitted yesterday and I’m extremely happy with them. I contacted AdamsBlinds a month ago. After sending pictures of my window, they organised for a fitter to…",
+    "We had a great experience from start to finish. Booking an engineer for measurements and choosing samples for our office was quick and easy — we were able to get an appointment …",
+    "I've ordered 2 wooden Venetian blinds to be installed over my sash windows in my flat. The team at AdamsBlinds have been so helpful throughout the process. They gave me advice b…"
+   ]
+  },
   {
    "id": "5221391223730379479:-8653393090375284627",
    "name": "Cinder - Belsize Park",
