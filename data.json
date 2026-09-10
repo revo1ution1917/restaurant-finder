@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10T14:55:47.549Z",
+ "updated": "2026-09-10T19:29:26.412Z",
  "source": "google-maps-shared-list",
  "count": 363,
  "places": [
@@ -5567,8 +5567,8 @@
   {
    "id": "5221392743496948061:7445217625488942827",
    "name": "Sune Restaurant",
-   "lat": 51.5353935,
-   "lng": -0.0627252,
+   "lat": 51.535410399999996,
+   "lng": -0.0627228,
    "note": null,
    "tags": [],
    "area": "London Fields",
