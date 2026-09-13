@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-13T00:43:38.447Z",
+ "updated": "2026-09-13T10:05:17.543Z",
  "source": "google-maps-shared-list",
  "count": 363,
  "places": [
@@ -707,8 +707,8 @@
   {
    "id": "5221392874280685957:8813275917528147258",
    "name": "Lodestar Coffee",
-   "lat": 51.5552597,
-   "lng": -0.056154699999999995,
+   "lat": 51.555259299999996,
+   "lng": -0.056158599999999996,
    "note": "Amazing coffee",
    "tags": [
     "amazing coffee"
