@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-14T10:27:59.948Z",
+ "updated": "2026-09-14T16:53:50.492Z",
  "source": "google-maps-shared-list",
  "count": 363,
  "places": [
@@ -2874,8 +2874,8 @@
   {
    "id": "5221364482286544635:6541315127567783353",
    "name": "Its Thecha",
-   "lat": 51.5091466,
-   "lng": -0.0156913,
+   "lat": 51.5070425,
+   "lng": -0.029095199999999998,
    "note": "Mumbai wok",
    "tags": [
     "mumbai wok"
