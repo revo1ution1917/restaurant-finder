@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-15T01:17:42.272Z",
+ "updated": "2026-09-15T09:53:24.405Z",
  "source": "google-maps-shared-list",
  "count": 363,
  "places": [
@@ -7214,8 +7214,8 @@
   {
    "id": "5221379897627082509:6836043660885291851",
    "name": "Alwan Supermarket",
-   "lat": 51.5858616,
-   "lng": -0.274965,
+   "lat": 51.5858485,
+   "lng": -0.2749667,
    "note": "Iraqi supermarket",
    "tags": [
     "iraqi supermarket"
