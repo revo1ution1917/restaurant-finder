@@ -1,8 +1,27 @@
 {
- "updated": "2026-09-16T01:11:39.105Z",
+ "updated": "2026-09-16T09:46:39.056Z",
  "source": "google-maps-shared-list",
- "count": 363,
+ "count": 364,
  "places": [
+  {
+   "id": "5221392704277062049:-5783338509326091329",
+   "name": "Pardeh",
+   "lat": 51.5337847,
+   "lng": -0.058702899999999995,
+   "note": null,
+   "tags": [],
+   "area": "Bethnal Green",
+   "address": "45 Corbridge Cres, London E2 9FR",
+   "cuisine": null,
+   "rating": null,
+   "ratingCount": null,
+   "price": null,
+   "placeId": null,
+   "mapsUrl": "https://maps.google.com/?ftid=0x48761d001b4021a1:0xafbd744467c7fbbf",
+   "summary": null,
+   "vibes": [],
+   "reviews": []
+  },
   {
    "id": "5221392705310945581:8834790938572970661",
    "name": "Blinds",
@@ -128,8 +147,8 @@
   {
    "id": "5221392673723262857:5018592865447954558",
    "name": "UCHI",
-   "lat": 51.5537098,
-   "lng": -0.055978999999999994,
+   "lat": 51.553708699999994,
+   "lng": -0.0559922,
    "note": null,
    "tags": [],
    "area": "Clapton",
@@ -5164,8 +5183,8 @@
   {
    "id": "5221364776117390049:-3958751698266773448",
    "name": "OMA",
-   "lat": 51.505348999999995,
-   "lng": -0.090019,
+   "lat": 51.5053651,
+   "lng": -0.0899994,
    "note": null,
    "tags": [],
    "area": "Borough",
