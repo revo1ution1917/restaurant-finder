@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-18T14:52:40.694Z",
+ "updated": "2026-09-18T19:29:14.368Z",
  "source": "google-maps-shared-list",
  "count": 364,
  "places": [
@@ -3244,13 +3244,13 @@
   {
    "id": "5221367383917352271:-5702150666491329250",
    "name": "Prince Arthur, Belgravia",
-   "lat": 51.4907676,
-   "lng": -0.1507961,
+   "lat": 51.4934952,
+   "lng": -0.1671181,
    "note": "Basque steakhouse",
    "tags": [
     "basque steakhouse"
    ],
-   "area": "Victoria",
+   "area": "South Kensington",
    "address": "11 Pimlico Rd, London SW1W 8NA, UK",
    "cuisine": "Pub",
    "rating": 4,
