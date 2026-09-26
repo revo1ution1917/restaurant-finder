@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T09:45:55.091Z",
+ "updated": "2026-09-26T14:55:40.548Z",
  "source": "google-maps-shared-list",
  "count": 366,
  "places": [
@@ -453,8 +453,8 @@
   {
    "id": "5221393012071101975:-7975608606757490213",
    "name": "Azra Kitchen Ltd",
-   "lat": 51.5702996,
-   "lng": -0.0092733,
+   "lat": 51.5708598,
+   "lng": -0.010560799999999999,
    "note": null,
    "tags": [],
    "area": "Leyton",
