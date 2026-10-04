@@ -1,8 +1,27 @@
 {
- "updated": "2026-10-04T11:01:26.788Z",
+ "updated": "2026-10-04T19:59:50.994Z",
  "source": "google-maps-shared-list",
- "count": 370,
+ "count": 371,
  "places": [
+  {
+   "id": "5221392990766052587:-5859303288533619747",
+   "name": "Easy 8",
+   "lat": 51.539695099999996,
+   "lng": -0.0562571,
+   "note": null,
+   "tags": [],
+   "area": "London Fields",
+   "address": "159A Mare St, London E8 3RD",
+   "cuisine": null,
+   "rating": null,
+   "ratingCount": null,
+   "price": null,
+   "placeId": null,
+   "mapsUrl": "https://maps.google.com/?ftid=0x48761d42cf5334eb:0xaeaf92b3f7acebdd",
+   "summary": null,
+   "vibes": [],
+   "reviews": []
+  },
   {
    "id": "5221393769669476049:-2684204281865386072",
    "name": "Da Pino",
