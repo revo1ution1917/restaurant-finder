@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T12:09:02.985Z",
+ "updated": "2026-10-05T23:05:26.054Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -3026,8 +3026,8 @@
   {
    "id": "5221364482286544635:6541315127567783353",
    "name": "Its Thecha",
-   "lat": 51.5070425,
-   "lng": -0.029095199999999998,
+   "lat": 51.507049699999996,
+   "lng": -0.0290617,
    "note": "Mumbai wok",
    "tags": [
     "mumbai wok"
@@ -5615,11 +5615,11 @@
   {
    "id": "5221392765127552935:-6185902538059648409",
    "name": "Doña",
-   "lat": 51.5595068,
-   "lng": -0.0739582,
+   "lat": 51.5493914,
+   "lng": -0.0756468,
    "note": null,
    "tags": [],
-   "area": "Stoke Newington",
+   "area": "Dalston",
    "address": "92 Stoke Newington High St, London N16 7NY, UK",
    "cuisine": "Bar",
    "rating": 4.6,
