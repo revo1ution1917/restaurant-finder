@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T11:52:55.805Z",
+ "updated": "2026-10-06T21:30:56.471Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -8778,8 +8778,8 @@
   {
    "id": "5221367225241449409:-6895340369394330357",
    "name": "Singapulah London",
-   "lat": 51.511964,
-   "lng": -0.1324231,
+   "lat": 51.5119378,
+   "lng": -0.1323674,
    "note": null,
    "tags": [],
    "area": "Soho",
