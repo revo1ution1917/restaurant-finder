@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T20:31:27.097Z",
+ "updated": "2026-10-11T01:44:05.170Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -6272,8 +6272,8 @@
   {
    "id": "5221366316239820953:-509649324214167415",
    "name": "Tokyo Bagel",
-   "lat": 51.5012609,
-   "lng": -0.11204879999999999,
+   "lat": 51.501265,
+   "lng": -0.112053,
    "note": "Japanese bakery, good matcha",
    "tags": [
     "japanese bakery",
