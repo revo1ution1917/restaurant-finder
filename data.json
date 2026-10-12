@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T02:11:32.614Z",
+ "updated": "2026-10-12T23:33:18.123Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -719,7 +719,7 @@
    "id": "5221367188897837127:-1113305077735716795",
    "name": "Oudh 1722",
    "lat": 51.5041072,
-   "lng": -0.09498179999999999,
+   "lng": -0.0949817,
    "note": null,
    "tags": [],
    "area": "Borough",
@@ -5288,8 +5288,8 @@
   {
    "id": "5221366118861755685:4397905030824145467",
    "name": "Misato",
-   "lat": 51.510833299999994,
-   "lng": -0.1319444,
+   "lat": 51.510854699999996,
+   "lng": -0.1318543,
    "note": "Cheap but good Japanese",
    "tags": [
     "cheap but good japanese"
