@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T01:04:33.895Z",
+ "updated": "2026-10-16T09:35:23.404Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -1306,7 +1306,7 @@
   {
    "id": "0:1424757161028413542",
    "name": "Dorian Restaurant",
-   "lat": 51.516642499999996,
+   "lat": 51.5166426,
    "lng": -0.2006354,
    "note": null,
    "tags": [],
