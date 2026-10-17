@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:11:08.527Z",
+ "updated": "2026-10-17T09:06:39.418Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -139,8 +139,8 @@
   {
    "id": "5221392704277062049:-5783338509326091329",
    "name": "Pardeh",
-   "lat": 51.5337854,
-   "lng": -0.0587061,
+   "lat": 51.5337847,
+   "lng": -0.058702899999999995,
    "note": null,
    "tags": [],
    "area": "Bethnal Green",
