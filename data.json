@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T00:45:47.588Z",
+ "updated": "2026-10-18T09:24:30.439Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -3635,8 +3635,8 @@
   {
    "id": "5221379684176467041:-3070738326761126534",
    "name": "Empire Empire",
-   "lat": 51.517962499999996,
-   "lng": -0.203617,
+   "lat": 51.5179579,
+   "lng": -0.2036142,
    "note": "Special Indian",
    "tags": [
     "special indian"
