@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T14:23:46.816Z",
+ "updated": "2026-10-18T19:20:06.080Z",
  "source": "google-maps-shared-list",
  "count": 371,
  "places": [
@@ -6892,8 +6892,8 @@
   {
    "id": "5221366121163062469:-1607384099083107890",
    "name": "Bun House",
-   "lat": 51.5117583,
-   "lng": -0.12986219999999998,
+   "lat": 51.5117905,
+   "lng": -0.1298502,
    "note": null,
    "tags": [],
    "area": "Covent Garden",
