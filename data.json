@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T22:14:28.592Z",
+ "updated": "2026-11-04T02:57:17.499Z",
  "source": "google-maps-shared-list",
  "count": 375,
  "places": [
@@ -2015,8 +2015,8 @@
   {
    "id": "5221391258863213113:4941354411316101672",
    "name": "The Hart - Marylebone",
-   "lat": 51.5183831,
-   "lng": -0.1547769,
+   "lat": 51.5184177,
+   "lng": -0.15479189999999998,
    "note": "Tartare",
    "tags": [
     "tartare"
