@@ -1,8 +1,27 @@
 {
- "updated": "2026-11-08T11:48:53.335Z",
+ "updated": "2026-11-08T21:00:08.378Z",
  "source": "google-maps-shared-list",
- "count": 375,
+ "count": 376,
  "places": [
+  {
+   "id": "5221377524605521629:3696859345393582407",
+   "name": "Trogolo | Tuscan Bar & Restaurant Notting Hill",
+   "lat": 51.513478199999994,
+   "lng": -0.20368139999999998,
+   "note": null,
+   "tags": [],
+   "area": "Notting Hill",
+   "address": "296 Westbourne Grove, London W11 2PS",
+   "cuisine": null,
+   "rating": null,
+   "ratingCount": null,
+   "price": null,
+   "placeId": null,
+   "mapsUrl": "https://maps.google.com/?ftid=0x48760f31d0520edd:0x334de1fce2c48147",
+   "summary": null,
+   "vibes": [],
+   "reviews": []
+  },
   {
    "id": "5221393219049714989:8309713277054526371",
    "name": "The Black Eel",
