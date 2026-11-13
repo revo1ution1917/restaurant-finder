@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T03:18:54.612Z",
+ "updated": "2026-11-13T12:55:41.113Z",
  "source": "google-maps-shared-list",
  "count": 376,
  "places": [
@@ -139,8 +139,8 @@
   {
    "id": "5221364542866335787:1524603449795684068",
    "name": "Cloth Cornhill",
-   "lat": 51.513152999999996,
-   "lng": -0.08601779999999999,
+   "lat": 51.5133028,
+   "lng": -0.0861173,
    "note": null,
    "tags": [],
    "area": "City of London",
