@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T22:21:18.426Z",
+ "updated": "2026-11-23T03:36:52.669Z",
  "source": "google-maps-shared-list",
  "count": 376,
  "places": [
@@ -301,8 +301,8 @@
   {
    "id": "5221393125749149063:-4835769529244321344",
    "name": "Barge East",
-   "lat": 51.5421857,
-   "lng": -0.0210223,
+   "lat": 51.5421999,
+   "lng": -0.0209663,
    "note": null,
    "tags": [],
    "area": "Hackney Wick",
