@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-25T15:22:59.382Z",
+ "updated": "2026-11-26T00:52:14.703Z",
  "source": "google-maps-shared-list",
  "count": 376,
  "places": [
   {
    "id": "5221377524605521629:3696859345393582407",
    "name": "Trogolo | Tuscan Bar & Restaurant Notting Hill",
-   "lat": 51.513478199999994,
-   "lng": -0.20368139999999998,
+   "lat": 51.513467899999995,
+   "lng": -0.2036738,
    "note": null,
    "tags": [],
    "area": "Notting Hill",
